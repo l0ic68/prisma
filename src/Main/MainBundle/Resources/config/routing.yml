@@ -11,3 +11,45 @@ contact:
 search:
     path:     /search
     defaults: { _controller: MainBundle:Search:searchTreat }
+
+
+a_propos:
+    path:     /a_propos
+    defaults: { _controller: MainBundle:Default:a_propos }
+
+audiovisuel_detail:
+    path:     /audiovisuel_detail
+    defaults: { _controller: MainBundle:Default:audiovisuel_detail }
+
+contact:
+    path:     /contact
+    defaults: { _controller: MainBundle:Default:contact }
+
+equipe:
+    path:     /equipe
+    defaults: { _controller: MainBundle:Default:equipe }
+
+graphic_detail:
+    path:     /graphic_detail
+    defaults: { _controller: MainBundle:Default:graphic_detail }
+
+index:
+    path:     /index
+    defaults: { _controller: MainBundle:Default:index }
+
+projets:
+    path:     /projets
+    defaults: { _controller: MainBundle:Default:projets }
+
+services:
+    path:     /services
+    defaults: { _controller: MainBundle:Default:services }
+
+social_detail:
+    path:     /social_detail
+    defaults: { _controller: MainBundle:Default:social_detail }
+
+web_detail:
+    path:     /web_detail
+    defaults: { _controller: MainBundle:Default:web_detail }
+

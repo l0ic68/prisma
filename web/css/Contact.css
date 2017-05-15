@@ -1,0 +1,65 @@
+/* CSS de la page Contact */
+
+/* Header banner */
+#Service_Banner, #Service_Banner img {
+  width: 100%;
+  height: auto;
+}
+
+/* Corp page */
+#Contact_Form {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5%;
+}
+
+#Contact_Form_ID {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.Inline {
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.Inline input{
+  margin-right: 35%;
+}
+#Contact_Form hr {
+  margin-top: 2%;
+  width: 80%;
+  border-bottom: solid black 1px;
+}
+
+#Categorie {
+  display: flex;
+  flex-direction: row;
+  margin-top: 2%;
+  flex-wrap: wrap;
+}
+#Categorie_Label {
+  width: 100%;
+}
+
+#Msg_Label {
+  margin-top: 2%;
+}
+
+#Msg {
+  margin-top: 2%;
+  height: 10em;
+}
+
+#Envoi {
+  width: 20%;
+  margin-top: 2%;
+  margin-left: auto;
+  margin-right: auto;
+}

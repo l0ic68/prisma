@@ -1,0 +1,19 @@
+/* CSS de la page Projets */
+
+/* Header banner */
+#Service_Banner, #Service_Banner img {
+  width: 100%;
+  height: auto;
+}
+
+/* Corp page */
+section h2 {
+  width: 100%;
+  text-align: center;
+}
+
+section p {
+  width: 60%;
+  margin: auto;
+  margin-bottom: 6%;
+}

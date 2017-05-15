@@ -1,0 +1,94 @@
+/* CSS de la partie fixe */
+
+/* General */
+body {
+  margin: 0;
+}
+
+/* Header */
+header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 4em;
+  border-bottom: solid Black 1px;
+  background-color: grey;
+}
+
+#Prisma_Logo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 50%;
+  padding-left: 1%;
+}
+
+#Prisma_Logo h1 {
+  margin-left: 2%;
+}
+
+#Main_Nav {
+  width: 50%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 1%;
+}
+
+#Main_Nav ul {
+  width: 100%;
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+#Main_Nav ul li {
+  margin-left:2%;
+}
+
+/* Section, corp du site */
+section {
+  margin-top: 4em;
+  flex: 1;
+  min-height: 69vh;
+}
+
+/* Footer */
+footer {
+  width: 100%;
+  border-top: solid black 1px;
+  background-color: grey;
+  display:flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+#Footer_Prisma, #Footer_contact, #Footer_Social, #Footer_Legal {
+  width: 25%;
+  border-right: dashed black 1px;
+  text-align: center;
+}
+
+#Footer_Prisma p {
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.Footer_Social {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.Footer_Social img {
+width: auto;
+height: auto;
+border-radius: 10%;
+}

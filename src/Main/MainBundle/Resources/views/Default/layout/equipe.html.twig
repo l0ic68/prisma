@@ -1,0 +1,101 @@
+{% extends "::layout/layout.html.twig" %}
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('CSS/Equipe.css') }}">
+{% endblock %}
+{% block body %}
+    <section>
+        <div id="Service_Banner">
+            <img src="http://www.placehold.it/1280x200" alt="Banniere service"/>
+        </div>
+        <h2>Qui sommes nous?</h2>
+        <div id="Equipe_Content">
+            <div class="Equipe_Case_left">
+                <div class="Equipe_Case_ID">
+                    <img src="http://www.placehold.it/200x200" alt="Photo de Thomas Kleine">
+                    {% for equipe in equipes  %}
+                    <h3>{{ equipe.prenom }}</h3>
+                        {% endfor %}
+                    <p class="Role">UX Design / Front-End</p>
+                    <div class="Equipe_Social">
+                        <img src="http://www.placehold.it/50x50" alt="Icone Facebook">
+                        <img src="http://www.placehold.it/50x50" alt="Icone Twitter">
+                        <img src="http://www.placehold.it/50x50" alt="Icone Linkedin">
+                    </div>
+                </div>
+                <div class="Equipe_Case_Main_left">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <div class="Equipe_Maitrise">
+                        <p>Maîtrises :</p>
+                        <img src="http://www.placehold.it/50x50" alt="Icone Facebook">
+                        <img src="http://www.placehold.it/50x50" alt="Icone Twitter">
+                        <img src="http://www.placehold.it/50x50" alt="Icone Linkedin">
+                    </div>
+                </div>
+            </div>
+            <div class="Equipe_Case_right">
+                <div class="Equipe_Case_ID">
+                    <img src="http://www.placehold.it/200x200" alt="Photo de Thomas Kleine">
+                    <h3>Sébastien Oulerich</h3>
+                    <p class="Role">UX Design / Front-End</p>
+                    <div class="Equipe_Social">
+                        <img src="http://www.placehold.it/50x50" alt="Icone Facebook">
+                        <img src="http://www.placehold.it/50x50" alt="Icone Twitter">
+                        <img src="http://www.placehold.it/50x50" alt="Icone Linkedin">
+                    </div>
+                </div>
+                <div class="Equipe_Case_Main_right">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <div class="Equipe_Maitrise">
+                        <p>Maîtrises :</p>
+                        <img src="http://www.placehold.it/50x50" alt="Icone Facebook">
+                        <img src="http://www.placehold.it/50x50" alt="Icone Twitter">
+                        <img src="http://www.placehold.it/50x50" alt="Icone Linkedin">
+                    </div>
+                </div>
+            </div>
+            <div class="Equipe_Case_left">
+                <div class="Equipe_Case_ID">
+                    <img src="http://www.placehold.it/200x200" alt="Photo de Thomas Kleine">
+                    <h3>Loic Oulerich</h3>
+                    <p class="Role">Back-End</p>
+                    <div class="Equipe_Social">
+                        <img src="http://www.placehold.it/50x50" alt="Icone Facebook">
+                        <img src="http://www.placehold.it/50x50" alt="Icone Twitter">
+                        <img src="http://www.placehold.it/50x50" alt="Icone Linkedin">
+                    </div>
+                </div>
+                <div class="Equipe_Case_Main_left">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <div class="Equipe_Maitrise">
+                        <p>Maîtrises :</p>
+                        <img src="http://www.placehold.it/50x50" alt="Icone Facebook">
+                        <img src="http://www.placehold.it/50x50" alt="Icone Twitter">
+                        <img src="http://www.placehold.it/50x50" alt="Icone Linkedin">
+                    </div>
+                </div>
+            </div>
+            <div class="Equipe_Case_right">
+                <div class="Equipe_Case_ID">
+                    <img src="http://www.placehold.it/200x200" alt="Photo de Thomas Kleine">
+                    <h3>Julien Goby</h3>
+                    <p class="Role">Multimedia</p>
+                    <div class="Equipe_Social">
+                        <img src="http://www.placehold.it/50x50" alt="Icone Facebook">
+                        <img src="http://www.placehold.it/50x50" alt="Icone Twitter">
+                        <img src="http://www.placehold.it/50x50" alt="Icone Linkedin">
+                    </div>
+                </div>
+                <div class="Equipe_Case_Main_right">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <div class="Equipe_Maitrise">
+                        <p>Maîtrises :</p>
+                        <img src="http://www.placehold.it/50x50" alt="Icone Facebook">
+                        <img src="http://www.placehold.it/50x50" alt="Icone Twitter">
+                        <img src="http://www.placehold.it/50x50" alt="Icone Linkedin">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% endblock %}

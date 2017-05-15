@@ -1,0 +1,53 @@
+/* CSS de la page Projets */
+
+/* Header banner */
+#Service_Banner, #Service_Banner img {
+  width: 100%;
+  height: auto;
+}
+
+/* Bloc Travaux Recent */
+#Bloc_Travaux {
+  height: auto;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  margin-bottom: 5%;
+}
+
+#Bloc_Travaux_Content {
+  width: 60%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#Travaux_Header h2 {
+  width: 100%;
+  text-align: center;
+}
+
+#Travaux_Header ul {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+#Travaux_Slider {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+#Travaux_Slider img {
+  height: auto;
+  width: 25%;
+  margin: 0;
+  padding: 0;
+}
+
+#Travaux_Slider img:hover {
+  opacity: 0.5;
+}

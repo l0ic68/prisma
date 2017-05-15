@@ -1,0 +1,260 @@
+/* CSS de la page principale */
+
+/* Bloc Service */
+#Bloc_Service {
+  height: auto;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  border-bottom: solid black 1px;
+}
+
+#Bloc_Service_Content {
+  width: 80%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.Bloc_Service_case {
+  width: 20%;
+  border: solid black 1px;
+}
+
+.Bloc_Service_case h2 {
+  text-align: center;
+}
+
+.Bloc_Service_case hr {
+  width: 80%;
+  border: solid black 1px;
+}
+
+.Bloc_Service_case p {
+  width: 90%;
+  text-align: justify;
+  margin: auto;
+}
+
+.Service_Plus {
+  width: 100%;
+  margin: 0;
+  padding-top: 3%;
+  padding-bottom: 3%;
+  text-align: center;
+  border-top: solid black 1px;
+  background-color: grey;
+}
+
+/* Bloc Travaux Recent */
+#Bloc_Travaux {
+  height: auto;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  border-bottom: solid black 1px;
+}
+
+#Bloc_Travaux_Content {
+  width: 60%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#Travaux_Header h2 {
+  width: 100%;
+  text-align: center;
+}
+
+#Travaux_Header ul {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+#Travaux_Slider {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+#Travaux_Slider img {
+  height: auto;
+  width: 25%;
+  margin: 0;
+  padding: 0;
+}
+
+#Travaux_Slider img:hover {
+  opacity: 0.5;
+}
+
+/* Bloc Equipe */
+#Bloc_Equipe {
+  height: auto;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  border-bottom: solid black 1px;
+}
+
+#Bloc_Equipe h2 {
+  width: 100%;
+  text-align: center;
+}
+
+#Bloc_Equipe_Content {
+  width: 80%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.Bloc_Equipe_Case {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 20%;
+}
+
+.Bloc_Equipe_Case img {
+  width: 70%;
+  height: auto;
+  border-radius: 100%;
+}
+
+.Bloc_Equipe_Case h3 {
+  text-align: center;
+}
+
+.Bloc_Equipe_Case p {
+  width: 90%;
+  text-align: center;
+  margin: auto;
+}
+
+.Equipe_Social {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.Equipe_Social img {
+width: auto;
+height: auto;
+border-radius: 10%;
+}
+
+/* Bloc Confiance */
+#Bloc_Confiance {
+  height: auto;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  border-bottom: solid black 1px;
+}
+
+#Bloc_Confiance h2 {
+  width: 100%;
+  text-align: center;
+}
+
+#Bloc_Confiance_Slider {
+  width: 70%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#Bloc_Confiance_data {
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+/* Bloc Temoignage */
+#Bloc_Temoin {
+  height: auto;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  border-bottom: solid black 1px;
+}
+
+#Bloc_Temoin h2 {
+  width: 100%;
+  text-align: center;
+}
+
+#Bloc_Temoin_Content {
+  width: 80%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.Bloc_Temoin_Case {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 20%;
+}
+
+.Bloc_Temoin_Case img {
+  width: 70%;
+  height: auto;
+  border-radius: 100%;
+}
+
+.Bloc_Temoin_Case hr {
+  width: 80%;
+  border-bottom: solid black 1px;
+}
+
+.Bloc_Temoin_Case p {
+  width: 90%;
+  text-align: center;
+  margin: auto;
+}
+
+.Bloc_Temoin_ID {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1%;
+}
+
+.Bloc_Temoin_ID img {
+ width: 3em;
+ height: 3em;
+ border-radius: 100%;
+}
+
+.Bloc_Temoin_ID_Name {
+  width: 70%;
+}
+
+.Bloc_Temoin_ID_Name p, .Bloc_Temoin_ID_Name h3{
+  margin: 0;
+  padding: 0;
+  text-align: left;
+}

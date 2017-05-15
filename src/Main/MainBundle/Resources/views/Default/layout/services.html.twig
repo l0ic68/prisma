@@ -1,0 +1,27 @@
+{% extends "::layout/layout.html.twig" %}
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('CSS/Services.css') }}">
+{% endblock %}
+{% block body %}
+    <section>
+        <div id="Service_Banner">
+            <img src="http://www.placehold.it/1280x200" alt="Banniere service"/>
+        </div>
+        <div id="Service_Map">
+            <div id="Service_Map_Content">
+                <div class="Service_Map_Case">
+                    <a href="Web_Detail.html"><img src="http://www.placehold.it/1280x200" alt="Image lien site web detail"/></a>
+                </div>
+                <div class="Service_Map_Case">
+                    <a href="Audiovisuel_Detail.html"><img src="http://www.placehold.it/1280x200" alt="Image lien audiovisuel detail"/></a>
+                </div>
+                <div class="Service_Map_Case">
+                    <a href="Social_Detail.html"><img src="http://www.placehold.it/1280x200" alt="Image lien social detail"/></a>
+                </div>
+                <div class="Service_Map_Case">
+                    <a href="Graphic_Detail.html"><img src="http://www.placehold.it/1280x200" alt="Image lien charte graphique detail"/></a>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

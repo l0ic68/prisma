@@ -1,0 +1,38 @@
+{% extends "::layout/layout.html.twig" %}
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('CSS/Contact.css') }}">
+{% endblock %}
+{% block body %}
+    <section>
+        <div id="Service_Banner">
+            <img src="http://www.placehold.it/1280x200" alt="Banniere service"/>
+        </div>
+        <form id="Contact_Form">
+            <div id="Contact_Form_ID">
+                <div class="Inline">
+                    <label for="Nom">Nom*</label><input type="text" id="Nom">
+                </div>
+                <div class="Inline">
+                    <label for="Prenom">Prenom*</label><input type="text" id="Prenom">
+                </div>
+                <div class="Inline">
+                    <label for="Mail">E-mail*</label><input type="text" id="Mail">
+                </div>
+                <div class="Inline">
+                    <label for="Orga">Entreprise / organisme</label><input type="text" id="Orga">
+                </div>
+            </div>
+            <hr/>
+            <div id="Categorie">
+                <label for="Categorie" id="Categorie_Label">Categorie*</label>
+                Site Web<input type="checkbox">
+                Reseau sociaux<input type="checkbox">
+                Audiovisuel<input type="checkbox">
+                Charte graphique<input type="checkbox">
+            </div>
+            <label for="Msg" id="Msg_Label">Message</label><textarea id="Msg"></textarea>
+            <button id="Envoi">Envoyer</button>
+        </form>
+    </section>
+
+{% endblock %}

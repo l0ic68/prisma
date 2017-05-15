@@ -1,0 +1,85 @@
+/* CSS de la page Equipe */
+
+/* Header banner */
+#Service_Banner, #Service_Banner img {
+  width: 100%;
+  height: auto;
+}
+
+/* Titre page */
+section h2 {
+  text-align: center;
+  width: 100%;
+}
+/* Equipe_Content */
+#Equipe_Content {
+  width: 100%;
+  height: auto;
+  margin-bottom: 5%;
+}
+
+.Equipe_Case_left {
+  width: 70%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10%;
+}
+
+.Equipe_Case_right {
+  width: 70%;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10%;
+}
+
+.Equipe_Case_ID {
+  width: 20%;
+}
+.Equipe_Case_ID h3, .Role {
+  text-align: center;
+  width: 100%;
+  margin: 0;
+}
+.Equipe_Case_left img, .Equipe_Case_right img {
+  border-radius: 100%;
+}
+
+.Equipe_Social {
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.Equipe_Social img {
+width: auto;
+height: auto;
+margin-top: 5%;
+border-radius: 10%;
+}
+
+.Equipe_Case_Main_left {
+  padding-left: 2%;
+  margin-right: 20%;
+}
+
+.Equipe_Case_Main_right {
+  padding-right: 2%;
+  margin-left: 20%;
+}
+
+.Equipe_Maitrise {
+  width: 100%;
+}
+
+.Equipe_Maitrise p {
+  margin: 0;
+}

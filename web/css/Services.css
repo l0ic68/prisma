@@ -1,0 +1,37 @@
+/* CSS de la page Service */
+
+/* Header banner */
+#Service_Banner, #Service_Banner img {
+  width: 100%;
+  height: auto;
+}
+
+/* Services Map */
+#Service_Map {
+  width: 100%;
+  height: auto;
+}
+
+#Service_Map_Content {
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.Service_Map_Case {
+  width: 40%;
+  height: 10em;
+  margin-top: 3%;
+}
+
+.Service_Map_Case img {
+  margin: auto;
+  height: 100%;
+  width:100%;
+}
