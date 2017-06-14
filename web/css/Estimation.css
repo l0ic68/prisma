@@ -1,0 +1,51 @@
+/* CSS de la page Estimation */
+
+/* Header banner */
+#Service_Banner {
+  height: 15em;
+  width: 100%;
+}
+
+#Service_Banner img {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+/* Corp page */
+
+#Select {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.Service_Select {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+ .Select_Title {
+   width: 100%;
+   text-align: center;
+ }
+
+ .Select_Case {
+   width: 20%;
+   height: 5em;
+   margin: 0;
+   background-color:grey;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+ }
+
+ .Select_Case:hover {
+   opacity: 0.5;
+ }

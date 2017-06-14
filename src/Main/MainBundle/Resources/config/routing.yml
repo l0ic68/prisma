@@ -12,7 +12,6 @@ search:
     path:     /search
     defaults: { _controller: MainBundle:Search:searchTreat }
 
-
 a_propos:
     path:     /a_propos
     defaults: { _controller: MainBundle:Default:a_propos }
@@ -41,15 +40,35 @@ projets:
     path:     /projets
     defaults: { _controller: MainBundle:Default:projets }
 
+searchProjets:
+    pattern: /searchProjets
+    defaults: { _controller: MainBundle:Default:searchprojets }
+
 services:
     path:     /services
     defaults: { _controller: MainBundle:Default:services }
 
-social_detail:
-    path:     /social_detail
-    defaults: { _controller: MainBundle:Default:social_detail }
 
 web_detail:
     path:     /web_detail
     defaults: { _controller: MainBundle:Default:web_detail }
 
+graphic_detail:
+    path:     /graphic_detail
+    defaults: { _controller: MainBundle:Default:graphic_detail }
+
+materiel_detail:
+    path:     /materiel_detail
+    defaults: { _controller: MainBundle:Default:materiel_detail }
+
+reseau_detail:
+    path:     /reseau_detail
+    defaults: { _controller: MainBundle:Default:reseau_detail }
+
+audiovisuel_detail:
+    path:     /audiovisuel_detail
+    defaults: { _controller: MainBundle:Default:audiovisuel_detail }
+
+projet_detail:
+    path:     /{id}/projet_detail
+    defaults: { _controller: MainBundle:Default:projet_detail }

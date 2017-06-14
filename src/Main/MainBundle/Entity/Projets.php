@@ -64,11 +64,16 @@ class Projets
     private $presentation;
 
     /**
-     * @var string
-     *
-     * @ORM\Column(name="images", type="string", length=255)
+     * @ORM\ManyToMany(targetEntity="Main\MainBundle\Entity\Media", cascade={"persist"})
+     * @ORM\JoinTable(name="projet_media")
      */
-    private $images;
+    private $media;
+
+    /**
+     * @ORM\ManyToMany(targetEntity="Main\MainBundle\Entity\Media", cascade={"persist"})
+     * @ORM\JoinTable(name="projet_techo")
+     */
+    private $techno;
 
     /**
      * @var string
@@ -77,6 +82,11 @@ class Projets
      */
     private $url;
 
+    /**
+     * @ORM\ManyToOne(targetEntity="Main\MainBundle\Entity\Media", cascade={"persist","remove"})
+     * @ORM\JoinColumn(nullable=false)
+     */
+    public $picture;
 
     /**
      * Get id
@@ -270,5 +280,104 @@ class Projets
     public function getUrl()
     {
         return $this->url;
+    }
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->media = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+
+    /**
+     * Add medium
+     *
+     * @param \Main\MainBundle\Entity\Media $medium
+     *
+     * @return Projets
+     */
+    public function addMedia(\Main\MainBundle\Entity\Media $medium)
+    {
+        $this->media[] = $medium;
+
+        return $this;
+    }
+
+    /**
+     * Remove medium
+     *
+     * @param \Main\MainBundle\Entity\Media $medium
+     */
+    public function removeMedia(\Main\MainBundle\Entity\Media $medium)
+    {
+        $this->media->removeElement($medium);
+    }
+
+    /**
+     * Get media
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getMedia()
+    {
+        return $this->media;
+    }
+
+    /**
+     * Add techno
+     *
+     * @param \Main\MainBundle\Entity\Media $techno
+     *
+     * @return Projets
+     */
+    public function addTechno(\Main\MainBundle\Entity\Media $techno)
+    {
+        $this->techno[] = $techno;
+
+        return $this;
+    }
+
+    /**
+     * Remove techno
+     *
+     * @param \Main\MainBundle\Entity\Media $techno
+     */
+    public function removeTechno(\Main\MainBundle\Entity\Media $techno)
+    {
+        $this->techno->removeElement($techno);
+    }
+
+    /**
+     * Get techno
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getTechno()
+    {
+        return $this->techno;
+    }
+
+    /**
+     * Set picture
+     *
+     * @param \Main\MainBundle\Entity\Media $picture
+     *
+     * @return Projets
+     */
+    public function setPicture(\Main\MainBundle\Entity\Media $picture)
+    {
+        $this->picture = $picture;
+
+        return $this;
+    }
+
+    /**
+     * Get picture
+     *
+     * @return \Main\MainBundle\Entity\Media
+     */
+    public function getPicture()
+    {
+        return $this->picture;
     }
 }

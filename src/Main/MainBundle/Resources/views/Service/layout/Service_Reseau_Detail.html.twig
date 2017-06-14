@@ -1,0 +1,28 @@
+{% extends "::layout/layout.html.twig" %}
+{% block stylesheets %}
+  <link rel="stylesheet" href="{{ asset('CSS/Service_Detail.css') }}">
+{% endblock %}
+{% block body %}
+    <section>
+      <div id="Service_Banner">
+        <img src="http://www.placehold.it/1280x200" alt="Banniere service" id="Service_Banner"/>
+      </div>
+      <nav id="Service_Nav">
+        <ul>
+          <li id="Web"><a href="{{ path('web_detail') }}">Site Web</a></li>
+          <li id="Audiovisuel"><a href="{{ path('audiovisuel_detail') }}">Audiovisuel</a></li>
+          <li id="Social_Current"><a href="{{ path('reseau_detail') }}">Reseaux Sociaux</a></li>
+          <li id="Graphic"><a href="{{ path('graphic_detail') }}">Charte Graphique</a></li>
+          <li id="Materiel"><a href="{{ path('materiel_detail') }}">Materiel</a></li>
+        </ul>
+      </nav>
+
+      <div id="Service_Reseau">
+        <div id="Service_Header">
+          <p id="Service_Header_Text">Texte de presentation de reseau sociaux</p>
+        </div>
+        <div id="Service_Content">
+        </div>
+      </div>
+    </section>
+    {% endblock %}

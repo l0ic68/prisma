@@ -1,0 +1,181 @@
+{% extends "::layout/layout.html.twig" %}
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('CSS/Index.css') }}">
+{% endblock %}
+{% block body %}
+    <section>
+        <div id="Bloc_Service">
+            <div id="Bloc_Service_Content">
+                <img src="http://www.placehold.it/50x50" alt="Fleche gauche" onclick="Slider_Service(1)">
+                <div class="Bloc_Service_case" id="Bloc_Web">
+                    <h2>Site Web</h2>
+                    <hr/>
+                    <p>Création ou refonte de site internet multi-support, (PC, tablette, smartphone,...) selon vos besoins (Blog, e-commerce, vitrine, ...) et objectifs.</p>
+                    <div class="Service_Plus"><a href="{{ path('web_detail') }}">En savoir plus.</a></div>
+                </div>
+
+
+                <div class="Bloc_Service_case" id="Bloc_Audiovisuel">
+                    <h2>Audiovisuel</h2>
+                    <hr/>
+                    <p>Réalisation de reportage, interview, film d'entreprise, afin d'améliorer votre visibilité sur internet.</p>
+                    <div class="Service_Plus"><a href="{{ path('audiovisuel_detail') }}">En savoir plus.</a></div>
+                </div>
+                <div class="Bloc_Service_case" id="Bloc_Social">
+                    <h2>Réseaux Sociaux</h2>
+                    <hr/>
+                    <p>Accompagnement de votre activité sur les réseaux sociaux (Facebook, Twitter, Instagram, Linkedin, Google+, ...).</p>
+                    <div class="Service_Plus"><a href="{{ path('reseau_detail') }}">En savoir plus.</a></div>
+                </div>
+                <div class="Bloc_Service_case" id="Bloc_Graphique">
+                    <h2>Charte Graphique</h2>
+                    <hr/>
+                    <p>Mise en place d'une identité visuelle pour votre projet avec la création d'un logo, de flyers, carte de visite, ...).</p>
+                    <div class="Service_Plus"><a href="{{ path('graphic_detail') }}">En savoir plus.</a></div>
+                </div>
+                <div class="Bloc_Service_case" id="Bloc_Materiel">
+                    <h2>Matériel</h2>
+                    <hr/>
+                    <p>Instalation d'ordinateur pour usage personnel ou professionnel adapté à vos besoins (bureautique, modélisation 3D, jeux vidéo, ...) ainsi que des espaces de stockage indépendants.</p>
+                    <div class="Service_Plus"><a href="{{ path('materiel_detail') }}">En savoir plus.</a></div>
+                </div>
+                <img src="http://www.placehold.it/50x50" alt="Fleche droite"  onclick="Slider_Service(2)">
+            </div>
+        </div>
+
+        <div id="Bloc_Travaux">
+            <div id="Bloc_Travaux_Content">
+                <div id="Travaux_Header">
+                    <h2>Travaux Récents</h2>
+                    <ul>
+                        <li><button class="search" value="Tous">Tous</button></li>
+                        /
+                        <li><button class="search" value="Site Web">Site Web</button></li>
+                        /
+                        <li><button class="search" value="Maquette">Maquette</button></li>
+                        /
+                        <li><button class="search" value="Audiovisuel">Audiovisuel</button></li>
+                        /
+                        <li><button class="search" value="Réseaux Sociaux">Réseaux Sociaux</button></li>
+                    </ul>
+                </div>
+                <div id="Travaux_Slider">
+                    {% for projet in projets | slice(0,10)%}
+                        <a href="{{ path('projet_detail', { 'id': projet.id }) }}">
+                            <img src="{{ asset(projet.picture.path) }}" alt="Image du slider"/>
+                        </a>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+
+        <div id="Bloc_Equipe">
+            <h2>Qui sommes nous?</h2>
+            <div id="Bloc_Equipe_Content">
+                <div class="Bloc_Equipe_Case">
+                    <img src="{{ asset('img/Profil_Thomas.jpg') }}" alt="Photo de Thomas Kleine">
+                    <h3>Thomas Kleine</h3>
+                    <h4>UX Design / SEO / Front End</h4>
+                    <p>Co-fondateur de Prisma Digital et étudiant à à SUPINFO Internationnal University, je suis passionné par l'Informatique et plus particulièrement par l'expérience utilisateur (UX Design) ainsi que la création audiovisuelle sur Internet.</p>
+                    <div class="Equipe_Social">
+                        <img src="{{ asset('img/facebook.png') }}" alt="Icone Facebook">
+                        <img src="{{ asset('img/twitter.png') }}" alt="Icone Twitter">
+                        <img src="{{ asset('img/linkedin.png') }}" alt="Icone Linkedin">
+                    </div>
+                </div>
+                <div class="Bloc_Equipe_Case">
+                    <img src="{{ asset('img/Profil_Sebastien.jpg') }}"  alt="Photo de Sebastien Oulerich">
+                    <h3>Sébastien Oulerich</h3>
+                    <h4>UX Design / Front End</h4>
+                    <p>Co-fondateur et développeur Front-End de Prisma Digital, entrepreneur passionné par l'informatique et plus précisément par internet ainsi que la gestion d'entreprises et de projets.</p>
+                    <div class="Equipe_Social">
+                        <img src="{{ asset('img/facebook.png') }}" alt="Icone Facebook">
+                        <img src="{{ asset('img/twitter.png') }}" alt="Icone Twitter">
+                        <img src="{{ asset('img/linkedin.png') }}" alt="Icone Linkedin">
+                    </div>
+                </div>
+                <div class="Bloc_Equipe_Case">
+                    <img src="http://www.placehold.it/200x200"  alt="Photo de Loic Oulerich">
+                    <h3>Loic Oulerich</h3>
+                    <h4>Back End</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <div class="Equipe_Social">
+                        <img src="{{ asset('img/facebook.png') }}" alt="Icone Facebook">
+                        <img src="{{ asset('img/twitter.png') }}" alt="Icone Twitter">
+                        <img src="{{ asset('img/linkedin.png') }}" alt="Icone Linkedin">
+                    </div>
+                </div>
+                <div class="Bloc_Equipe_Case">
+                    <img src="http://www.placehold.it/200x200"  alt="Photo de Julien Goby">
+                    <h3>Julien Goby</h3>
+                    <h4>Audiovisuel</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <div class="Equipe_Social">
+                        <img src="{{ asset('img/facebook.png') }}" alt="Icone Facebook">
+                        <img src="{{ asset('img/twitter.png') }}" alt="Icone Twitter">
+                        <img src="{{ asset('img/linkedin.png') }}" alt="Icone Linkedin">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="Bloc_Confiance">
+            <h2>Ils nous font confiance !</h2>
+            <div id="Bloc_Confiance_Slider">
+                <img src="http://www.placehold.it/50x50" alt="Fleche gauche">
+                <div id="Bloc_Confiance_data">
+                    <img src="http://www.placehold.it/100x100" alt="#">
+                    <img src="http://www.placehold.it/100x100" alt="#">
+                    <img src="http://www.placehold.it/100x100" alt="#">
+                    <img src="http://www.placehold.it/100x100" alt="#" class="Mobile_Overflow">
+                    <img src="http://www.placehold.it/100x100" alt="#" class="Mobile_Overflow">
+                </div>
+                <img src="http://www.placehold.it/50x50" alt="Fleche droite">
+            </div>
+        </div>
+
+        <div id="Bloc_Temoin">
+            <h2>Témoignages</h2>
+            {% for client in clients |slice(0,3) %}
+            <div id="Bloc_Temoin_Content">
+                <div class="Bloc_Temoin_Case">
+                    <p>{{ client.temoignage }}</p>
+                    <hr class="Mobile_Overflow"/>
+                    <div class="Bloc_Temoin_ID">
+                        <img src="http://www.placehold.it/10x10" alt="#">
+                        <div class="Bloc_Temoin_ID_Name">
+                            <h3>{{ client.nom }} {{ client.prenom }}</h3>
+                            <p>{{ client.entreprise }}</p>
+                        </div>
+                    </div>
+                    <hr class="Mobile_Display"/>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+    {% block javascripts %}
+        <script type="text/javascript">
+            $(function(){
+                $('.search').on('click', function()
+                {
+                    var comment = $(this).val();
+                    $.ajax({
+                        type: "GET",
+                        dataType: "json",
+                        url: "{{ path('searchProjets') }}",
+                        cache: false,
+                        data: { text: comment},
+                        success:function(response){
+                            $('#Travaux_Slider').replaceWith(response.classifiedList);
+                        },
+                        error:function(response){
+                            console.log(response);
+                        }
+                    });
+                });
+            });
+
+        </script>
+    {% endblock %}
+{% endblock %}

@@ -21,6 +21,7 @@ class ClientsData extends AbstractFixture implements OrderedFixtureInterface
         $client1 = new Client();
         $client1->setEntreprise("Prisma");
         $client1->setNom("Oulerich");
+        $client1->setPrenom("Loic");
         $client1->setMail("oulerich.loic@gmail.com");
         $client1->setUrlSite("faerith.fr");
         $client1->setTemoignage("C'est super bien");

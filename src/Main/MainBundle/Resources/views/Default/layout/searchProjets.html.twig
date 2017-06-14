@@ -1,0 +1,7 @@
+<div id="Travaux_Slider">
+    {% for projet in projets %}
+        <a href="{{ path('projet_detail', { 'id': projet.id }) }}">
+            <img src="{{ asset(projet.picture.path) }}" alt="Image du slider"/>
+        </a>
+    {% endfor %}
+</div>

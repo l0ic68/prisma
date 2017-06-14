@@ -4,6 +4,7 @@ namespace Main\MainBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Main\MainBundle\Entity\Contact;
+use Symfony\Component\HttpFoundation\JsonResponse;
 use Main\MainBundle\Form\ContactType;
 
 class DefaultController extends Controller
@@ -37,17 +38,16 @@ class DefaultController extends Controller
 
     public function indexAction()
     {
-        return $this->render('MainBundle:Default:layout/index.html.twig');
+        $em = $this->getDoctrine()->getManager();
+        $projets = $em->getRepository('MainBundle:Projets')->findAll();
+        $clients = $em->getRepository('MainBundle:Client')->findAll();
+        return $this->render('MainBundle:Default:layout/main.html.twig', array('projets' => $projets,'clients'=>$clients));
     }
     public function a_proposAction()
     {
         $em = $this->getDoctrine()->getManager();
-        $apropos = $em->getRepository('MainBundle:Client')->findAll();
+        $apropos = $em->getRepository('MainBundle:APropos')->findAll();
         return $this->render('MainBundle:Default:layout/a_propos.html.twig',array('apropos' => $apropos));
-    }
-    public function audiovisuel_detailAction()
-    {
-        return $this->render('MainBundle:Default:layout/audiovisuel_detail.html.twig');
     }
 
     public function equipeAction()
@@ -56,25 +56,66 @@ class DefaultController extends Controller
         $equipes = $em->getRepository('MainBundle:Equipe')->findAll();
         return $this->render('MainBundle:Default:layout/equipe.html.twig',array('equipes' => $equipes));
     }
-    public function graphic_detailAction()
-    {
-        return $this->render('MainBundle:Default:layout/graphic_detail.html.twig');
-    }
     public function projetsAction()
     {
-        return $this->render('MainBundle:Default:layout/projets.html.twig');
+        $em = $this->getDoctrine()->getManager();
+        $projets = $em->getRepository('MainBundle:Projets')->findAll();
+        return $this->render('MainBundle:Default:layout/projets.html.twig', array('projets' => $projets));
     }
     public function servicesAction()
     {
         return $this->render('MainBundle:Default:layout/services.html.twig');
     }
-    public function social_detailAction()
-    {
-        return $this->render('MainBundle:Default:layout/social_detail.html.twig');
-    }
     public function web_detailAction()
     {
-        return $this->render('MainBundle:Default:layout/web_detail.html.twig');
+        return $this->render('MainBundle:Service:layout/Service_Web_Detail.html.twig');
     }
 
+    public function audiovisuel_detailAction()
+    {
+        return $this->render('MainBundle:Service:layout/Service_Audiovisuel_Detail.html.twig');
+    }
+
+    public function graphic_detailAction()
+    {
+        return $this->render('MainBundle:Service:layout/Service_Graphic_Detail.html.twig');
+    }
+
+    public function materiel_detailAction()
+    {
+        return $this->render('MainBundle:Service:layout/Service_Materiel_Detail.html.twig');
+    }
+
+    public function reseau_detailAction()
+    {
+        return $this->render('MainBundle:Service:layout/Service_Reseau_Detail.html.twig');
+    }
+    public function projet_detailAction($id)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $projet = $em->getRepository('MainBundle:Projets')->find($id);
+        return $this->render('MainBundle:Default:layout/Projet_Detail.html.twig',array('projet' => $projet));
+    }
+
+    public function searchProjetsAction()
+    {
+        $request = $this->container->get('request');
+        $text = $request->query->get('text');
+        $em = $this->getDoctrine()->getManager();
+
+
+        $projets = $em->getRepository('MainBundle:Projets')->findByType($text);
+
+        if($text == 'ALL')
+        {
+            $projets = $em->getRepository('MainBundle:Projets')->findAll();
+        }
+        $content = $this->RenderView('MainBundle:Default:layout\searchProjets.html.twig', array(
+            'projets' => $projets,
+        ));
+
+        $response = new JsonResponse();
+        $response->setData(array('classifiedList' => $content));
+        return $response;
+    }
 }

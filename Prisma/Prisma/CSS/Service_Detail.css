@@ -1,0 +1,152 @@
+/* CSS de la page Service_Detail */
+
+/* Header banner */
+#Service_Banner {
+  height: 15em;
+  width: 100%;
+}
+
+#Service_Banner img {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+/* Corp page */
+
+#Service_Nav {
+  width: 100%;
+  height: 3em;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+
+#Service_Nav ul {
+  width: 100%;
+  height: 100%;
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+
+#Service_Nav ul li {
+  width: 20%;
+  height: 100%;
+  border: solid black 1px;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+#Service_Nav ul li a {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+#Web_Current {
+  background-color: red;
+}
+
+#Audiovisuel_Current {
+  background-color: green;
+}
+
+#Social_Current {
+  background-color: blue;
+}
+
+#Graphic_Current {
+  background-color: orange;
+}
+
+#Materiel_Current {
+  background-color: purple;
+}
+
+#Web:hover {
+  background-color: red;
+}
+
+#Audiovisuel:hover {
+  background-color: green;
+}
+
+#Social:hover {
+  background-color: blue;
+}
+
+#Graphic:hover {
+  background-color: orange;
+}
+
+#Materiel:hover {
+  background-color: purple;
+}
+
+#Service_Header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-bottom: solid black 1px;
+  min-height: 5em;
+  height: auto;
+}
+
+#Service_Header_Text {
+  width: 60%;
+  text-align: center;
+}
+
+#Service_Content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-bottom: 5%;
+}
+
+.Service_Box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 30%;
+  margin-top: 5%;
+}
+
+/* SCRIPT JS POUR CHANGER LE BACKGROUND EN FONCTION DE HOVER */
+
+.Service_Box ul{
+  width: 80%;
+}
+
+/* Pour les écrans inférieurs à 1024px de large */
+@media screen and (max-width: 1024px)
+{
+  .Service_Box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-top: 5%;
+    padding: 5%;
+    border-top: solid black 1px;
+    border-bottom: solid black 1px;
+  }
+}

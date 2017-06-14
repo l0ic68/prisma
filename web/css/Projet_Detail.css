@@ -1,0 +1,125 @@
+/* CSS de la page Projets */
+
+/* Header banner */
+#Projet_Banner {
+  height: 15em;
+  width: 100%;
+}
+
+#Projet_Banner img {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+/* corp de page */
+
+#Projet_Corp {
+  width: 80%;
+  margin-top: 4%;
+  margin-bottom: 4%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#Bloc_ID {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#Bloc_ID h2{
+  margin: 0;
+  padding: 0;
+  font-weight: bold;
+  font-size: 2em;
+}
+
+#Bloc_ID h3{
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+  font-size: 1.5em;
+}
+
+#Bloc_ID hr {
+  border: solid black 1px;
+  width: 100%;
+}
+
+#Bloc_Techno {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 60%;
+  margin-top: 3%;
+}
+
+#Techno_List {
+    width: 70%;
+    margin-left: 1%;
+}
+
+#Bloc_Date {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 60%;
+}
+
+#Date_Value {
+  margin-left: 2%;
+}
+
+#Bloc_Description {
+  width: 60%;
+  text-align: justify;
+}
+
+#Bloc_Slider {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#Bloc_Slider_Slider {
+  width:100%;
+  padding: 1%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+#Bloc_Slider_Slider img {
+  width:33%;
+}
+
+#Bloc_Link {
+  height: 2em;
+  width: 15%;
+  margin-top: 1%;
+  margin-bottom: 4%;
+}
+
+#Bloc_Link a {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background-color: grey;
+  text-align: center;
+  text-decoration: none;
+  color: black;
+}
+
+#Bloc_Link a:hover {
+  color: red;
+}

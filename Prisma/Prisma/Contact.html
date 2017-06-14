@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Prisma - Contact</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="CSS/Fixe.css">
+    <link rel="stylesheet" href="CSS/Contact.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+  </head>
+
+  <body>
+    <header>
+      <div id="Prisma_Logo">
+        <img src="http://www.placehold.it/50x50" alt="Logo Prisma"/>
+        <h1>Prisma</h1>
+        <img src="http://www.placehold.it/50x50" alt="Icone_navigation" id="Icone_Navigation" onclick='Nav_click()'/>
+      </div>
+      <nav id="Main_Nav">
+        <ul>
+          <li><a href="Index.html">Accueil</a></li>
+          <li><a href="Services.html">Services</a></li>
+          <li><a href="Projets.html">Projets</a></li>
+          <li><a href="Equipe.html">Equipe</a></li>
+          <li><a href="APropos.html">A propos</a></li>
+          <li><a href="Contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <nav id="Nav_Mobile">
+      <ul>
+        <li><a href="Index.html">Accueil</a></li>
+        <li><a href="Services.html">Services</a></li>
+        <li><a href="Projets.html">Projets</a></li>
+        <li><a href="Equipe.html">Equipe</a></li>
+        <li><a href="APropos.html">A propos</a></li>
+        <li><a href="Contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+    <section>
+      <h2 id="Service_Banner">
+        <img src="http://www.placehold.it/1280x200" alt="Banniere service"/>
+      </h2>
+      <form id="Contact_Form">
+        <div id="Contact_Form_ID">
+          <div class="Inline">
+            <label for="Nom">Nom*</label><input type="text" id="Nom">
+          </div>
+          <div class="Inline">
+            <label for="Prenom">Prenom*</label><input type="text" id="Prenom">
+          </div>
+          <div class="Inline">
+            <label for="Mail">E-mail*</label><input type="text" id="Mail">
+          </div>
+          <div class="Inline">
+            <label for="Orga">Entreprise / organisme</label><input type="text" id="Orga">
+          </div>
+        </div>
+        <hr/>
+        <div id="Categorie">
+          <label id="Categorie_Label">Categorie*</label>
+          Site Web<input type="checkbox">
+          Reseau sociaux<input type="checkbox">
+          Audiovisuel<input type="checkbox">
+          Charte graphique<input type="checkbox">
+        </div>
+        <label for="Objet" id="Objet_Label">Objet</label><input type="text" id="Objet">
+        <label for="Msg" id="Msg_Label">Message</label><textarea id="Msg"></textarea>
+        <button id="Envoi">Envoyer</button>
+      </form>
+    </section>
+
+    <footer>
+      <div id="Footer_Prisma">
+        <h2>Prisma</h2>
+        <p>Agence Web / audiovisuel, accompagnant votre entreprise vers le numerique.</p>
+      </div>
+      <div id="Footer_contact">
+        <h2>Contact</h2>
+        <p>Adresse</p>
+        <p>Mail</p>
+        <p>Telephone</p>
+      </div>
+      <div id="Footer_Social">
+        <h2>Social</h2>
+        <div class="Equipe_Social">
+          <img src="http://www.placehold.it/50x50" alt="Icone Facebook">
+          <img src="http://www.placehold.it/50x50" alt="Icone Twitter">
+          <img src="http://www.placehold.it/50x50" alt="Icone Instagram">
+          <img src="http://www.placehold.it/50x50" alt="Icone Youtube">
+        </div>
+      </div>
+      <div id="Footer_Legal">
+        <h2>Legal</h2>
+        <p><a href="Mention_Legale.html">Mention Legale</a></p>
+        <p>Copyright</p>
+      </div>
+    </footer>
+    <script type="text/javascript" src="Script/Fixe.js"></script>
+  </body>
+</html>

@@ -12,32 +12,49 @@
                 <div id="Travaux_Header">
                     <h2>Travaux Récents</h2>
                     <ul>
-                        <li>Tous</li>
+                        <li><button class="search" value="Tous">Tous</button></li>
                         /
-                        <li>Site Web</li>
+                        <li><button class="search" value="Site Web">Site Web</button></li>
                         /
-                        <li>Maquette</li>
+                        <li><button class="search" value="Maquette">Maquette</button></li>
                         /
-                        <li>Audiovisuel</li>
+                        <li><button class="search" value="Audiovisuel">Audiovisuel</button></li>
                         /
-                        <li>Réseaux Sociaux</li>
+                        <li><button class="search" value="Réseaux Sociaux">Réseaux Sociaux</button></li>
                     </ul>
                 </div>
                 <div id="Travaux_Slider">
-                    <img src="http://www.placehold.it/250x150" alt="Image du slider"/>
-                    <img src="http://www.placehold.it/250x150" alt="Image du slider"/>
-                    <img src="http://www.placehold.it/250x150" alt="Image du slider"/>
-                    <img src="http://www.placehold.it/250x150" alt="Image du slider"/>
-                    <img src="http://www.placehold.it/250x150" alt="Image du slider"/>
-                    <img src="http://www.placehold.it/250x150" alt="Image du slider"/>
-                    <img src="http://www.placehold.it/250x150" alt="Image du slider"/>
-                    <img src="http://www.placehold.it/250x150" alt="Image du slider"/>
-                    <img src="http://www.placehold.it/250x150" alt="Image du slider"/>
-                    <img src="http://www.placehold.it/250x150" alt="Image du slider"/>
-                    <img src="http://www.placehold.it/250x150" alt="Image du slider"/>
-                    <img src="http://www.placehold.it/250x150" alt="Image du slider"/>
+                    {% for projet in projets %}
+                        <a href="{{ path('projet_detail', { 'id': projet.id }) }}">
+                            <img src="{{ asset(projet.picture.path) }}" alt="Image du slider"/>
+                        </a>
+                   {% endfor %}
                 </div>
             </div>
         </div>
     </section>
+    {% block javascripts %}
+        <script type="text/javascript">
+            $(function(){
+                $('.search').on('click', function()
+                {
+                    var comment = $(this).val();
+                    $.ajax({
+                        type: "GET",
+                        dataType: "json",
+                        url: "{{ path('searchProjets') }}",
+                        cache: false,
+                        data: { text: comment},
+                        success:function(response){
+                            $('#Travaux_Slider').replaceWith(response.classifiedList);
+                        },
+                        error:function(response){
+                            console.log(response);
+                        }
+                    });
+                });
+            });
+
+        </script>
+    {% endblock %}
 {% endblock %}
