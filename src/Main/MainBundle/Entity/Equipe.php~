@@ -311,4 +311,3 @@ class Equipe
         return $this->linkedin;
     }
 }
-

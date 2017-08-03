@@ -187,4 +187,100 @@ class Contact
     {
         return $this->firstname;
     }
+
+    /**
+     * Set siteWeb
+     *
+     * @param boolean $siteWeb
+     *
+     * @return Contact
+     */
+    public function setSiteWeb($siteWeb)
+    {
+        $this->site_Web = $siteWeb;
+
+        return $this;
+    }
+
+    /**
+     * Get siteWeb
+     *
+     * @return boolean
+     */
+    public function getSiteWeb()
+    {
+        return $this->site_Web;
+    }
+
+    /**
+     * Set social
+     *
+     * @param boolean $social
+     *
+     * @return Contact
+     */
+    public function setSocial($social)
+    {
+        $this->social = $social;
+
+        return $this;
+    }
+
+    /**
+     * Get social
+     *
+     * @return boolean
+     */
+    public function getSocial()
+    {
+        return $this->social;
+    }
+
+    /**
+     * Set audiovisuel
+     *
+     * @param boolean $audiovisuel
+     *
+     * @return Contact
+     */
+    public function setAudiovisuel($audiovisuel)
+    {
+        $this->audiovisuel = $audiovisuel;
+
+        return $this;
+    }
+
+    /**
+     * Get audiovisuel
+     *
+     * @return boolean
+     */
+    public function getAudiovisuel()
+    {
+        return $this->audiovisuel;
+    }
+
+    /**
+     * Set charteGraphique
+     *
+     * @param boolean $charteGraphique
+     *
+     * @return Contact
+     */
+    public function setCharteGraphique($charteGraphique)
+    {
+        $this->charte_graphique = $charteGraphique;
+
+        return $this;
+    }
+
+    /**
+     * Get charteGraphique
+     *
+     * @return boolean
+     */
+    public function getCharteGraphique()
+    {
+        return $this->charte_graphique;
+    }
 }

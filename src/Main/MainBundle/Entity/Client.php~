@@ -278,4 +278,28 @@ class Client
     {
         return $this->newsletter;
     }
+
+    /**
+     * Set prenom
+     *
+     * @param string $prenom
+     *
+     * @return Client
+     */
+    public function setPrenom($prenom)
+    {
+        $this->prenom = $prenom;
+
+        return $this;
+    }
+
+    /**
+     * Get prenom
+     *
+     * @return string
+     */
+    public function getPrenom()
+    {
+        return $this->prenom;
+    }
 }

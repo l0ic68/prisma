@@ -356,4 +356,28 @@ class Projets
     {
         return $this->techno;
     }
+
+    /**
+     * Set picture
+     *
+     * @param \Main\MainBundle\Entity\Media $picture
+     *
+     * @return Projets
+     */
+    public function setPicture(\Main\MainBundle\Entity\Media $picture)
+    {
+        $this->picture = $picture;
+
+        return $this;
+    }
+
+    /**
+     * Get picture
+     *
+     * @return \Main\MainBundle\Entity\Media
+     */
+    public function getPicture()
+    {
+        return $this->picture;
+    }
 }

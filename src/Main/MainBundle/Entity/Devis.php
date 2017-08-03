@@ -24,10 +24,15 @@ class Devis
     /**
      * @var string
      *
-     * @ORM\Column(name="contenu_devis", type="string", length=255)
+     * @ORM\Column(name="type_site", type="string", length=255)
      */
-    private $contenuDevis;
+    private $type;
 
+    /**
+     * @ORM\ManyToMany(targetEntity="Main\MainBundle\Entity\Modules", cascade={"persist"})
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $modules;
 
     /**
      * Get id
@@ -40,25 +45,60 @@ class Devis
     }
 
     /**
-     * Set contenuDevis
+     * Set type
      *
-     * @param string $contenuDevis
+     * @param string $type
+     *
      * @return Devis
      */
-    public function setContenuDevis($contenuDevis)
+    public function setType($type)
     {
-        $this->contenuDevis = $contenuDevis;
+        $this->type = $type;
 
         return $this;
     }
 
     /**
-     * Get contenuDevis
+     * Get type
      *
-     * @return string 
+     * @return string
      */
-    public function getContenuDevis()
+    public function getType()
     {
-        return $this->contenuDevis;
+        return $this->type;
+    }
+
+    /**
+     * Add module
+     *
+     * @param \Main\MainBundle\Entity\Modules $module
+     *
+     * @return Devis
+     */
+    public function addModule(\Main\MainBundle\Entity\Modules $module)
+    {
+        $this->modules[] = $module;
+
+        return $this;
+    }
+
+    /**
+     * Remove module
+     *
+     * @param \Main\MainBundle\Entity\Modules $module
+     */
+    public function removeModule(\Main\MainBundle\Entity\Modules $module)
+    {
+        $this->modules->removeElement($module);
+    }
+
+    /**
+     * Get modules
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getModules()
+    {
+        return $this->modules;
     }
 }

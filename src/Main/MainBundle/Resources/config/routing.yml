@@ -16,6 +16,18 @@ a_propos:
     path:     /a_propos
     defaults: { _controller: MainBundle:Default:a_propos }
 
+estimation:
+    path:     /estimation
+    defaults: { _controller: MainBundle:Default:estimationetape1 }
+
+estimation2:
+    path:     /estimation2
+    defaults: { _controller: MainBundle:Default:estimationetape2 }
+
+estimation3:
+    path:     /estimation3
+    defaults: { _controller: MainBundle:Default:estimationetape3 }
+
 audiovisuel_detail:
     path:     /audiovisuel_detail
     defaults: { _controller: MainBundle:Default:audiovisuel_detail }
