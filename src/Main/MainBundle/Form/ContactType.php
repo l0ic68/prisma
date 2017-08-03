@@ -30,6 +30,11 @@ class ContactType extends AbstractType
             ->add('phone', 'text', array('label' => 'Telephone #',
                                           'attr' => array('class' => 'input-medium search-query form-control',
                                           'placeholder' => 'Telephone',)))
+            ->add('site_Web', 'radio', array('action' => array('Site Internet' =>"true")))
+            ->add('social', 'radio', array('action' => array('Réseau sociaux')))
+            ->add('audiovisuel', 'radio', array('action' => array('Audiovisuel' =>"true")))
+            ->add('charte_graphique', 'radio', array('action' => array('Charte_graphique' =>"true")))
+
                                           
             ->add('message', 'textarea', array('label' => 'Message',
                                           'attr' => array('class' => 'input-medium search-query form-control',
