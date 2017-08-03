@@ -3,67 +3,64 @@
 /* Bloc Service */
 #Bloc_Service {
   height: auto;
-  padding-top: 2%;
-  padding-bottom: 2%;
-  border-bottom: solid black 1px;
+  border-bottom: solid black 2px;
 }
 
 #Bloc_Service_Content {
-  width: 80%;
+  width: 100%;
   height: auto;
-  margin-left: auto;
-  margin-right: auto;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
 }
 
-#Bloc_Service_Content img {
-  display: none;
-}
-
 .Bloc_Service_case {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 16%;
-  height: 18em;
+  width: 20%;
+  height: 20em;
 }
 
 #Bloc_Web {
-  background-color: rgba(255, 0, 0, 0.2);
+  background-size: cover;
+  background-image: url("../img/Background_Service_Web.jpg");
 }
 
 #Bloc_Audiovisuel {
-  background-color: rgba(0, 255, 0, 0.2);
+  background-size: cover;
+  background-image: url("../img/Background_Service_Audiovisuel.jpg");
 }
 
 #Bloc_Social {
-  background-color: rgba(0, 0, 255, 0.2);
+  background-size: cover;
+  background-image: url("../img/Background_Service_Social.jpg");
 }
 
  #Bloc_Graphique {
-  background-color: rgba(237, 127, 16, 0.2);
+   background-size: cover;
+   background-image: url("../img/Background_Service_Graphique.jpg");
 }
 
 #Bloc_Materiel {
-  background-color: rgba(112, 41, 99, 0.2);
+  background-size: cover;
+  background-image: url("../img/Background_Service_Materiel.jpg");
 }
 
 .Bloc_Service_case h2 {
+  height: 100% !important;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
   text-align: center;
-}
-
-.Bloc_Service_case hr {
-  width: 80%;
-  border: solid black 1px;
-}
-
-.Bloc_Service_case p {
-  width: 90%;
-  text-align: justify;
-  margin: auto;
+  color: white;
+  margin: 0;
+  background-color: rgba(0,0,0,0.4);
+  font-family: 'Poiret One', cursive;
+  text-decoration: underline;
 }
 
 .Service_Plus {
@@ -71,33 +68,59 @@
   margin: 0;
   padding-top: 3%;
   padding-bottom: 3%;
-  text-align: center;
   border-top: solid black 1px;
   background-color: grey;
 }
 
+.Service_Plus a {
+  text-decoration: none;
+  color: black;
+  font-family: 'Flamenco', cursive;
+  font-size: 1.5em;
+}
+
+#Bloc_Web .Service_Plus {
+  background-color: #B2000B;
+}
+
+#Bloc_Audiovisuel .Service_Plus {
+  background-color: #03B22E;
+}
+
+#Bloc_Social .Service_Plus {
+  background-color: #19FFF0;
+}
+
+#Bloc_Graphique .Service_Plus {
+  background-color: #FF5600;
+}
+
+#Bloc_Materiel .Service_Plus {
+  background-color: #6B01B2;
+}
+
 /* Bloc Travaux Recent */
 #Bloc_Travaux {
-  height: auto;
-  padding-top: 2%;
-  padding-bottom: 2%;
-  border-bottom: solid black 1px;
+  width: 100%;
+  margin: 0;
 }
 
 #Bloc_Travaux_Content {
-  width: 60%;
+  width: 100%;
   height: auto;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 #Travaux_Header h2 {
   width: 100%;
+  font-family: 'Poiret One', cursive;
+  font-size: 2em;
+  color: Black;
   text-align: center;
 }
 
 #Travaux_Header ul {
-  width: 80%;
+  width: 30%;
+  margin-top: 0;
   margin-left: auto;
   margin-right: auto;
   list-style-type: none;
@@ -105,6 +128,15 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
+  font-size: 1.3em;
+  font-family: 'Flamenco', cursive;
+}
+
+#Travaux_Header ul li button{
+  font-family: 'Flamenco', cursive;
+  font-size: 1em;
+  background-color: #DCDCDC;
+  border: none;
 }
 
 #Travaux_Slider {
@@ -114,8 +146,8 @@
 }
 
 #Travaux_Slider a {
-  height: auto;
   width: 25%;
+  height: 14em;
   margin: 0;
   padding: 0;
 }
@@ -133,14 +165,18 @@
 
 /* Bloc Equipe */
 #Bloc_Equipe {
+  margin: 0;
+  background-color: #D5D5D5;
   height: auto;
-  padding-top: 2%;
-  padding-bottom: 2%;
-  border-bottom: solid black 1px;
 }
 
 #Bloc_Equipe h2 {
   width: 100%;
+  margin: 0;
+  font-size: 2em;
+  font-family: 'Poiret One', cursive;
+  padding-top: 1em;
+  margin-bottom: 1em;
   text-align: center;
 }
 
@@ -169,18 +205,24 @@
 }
 
 .Bloc_Equipe_Case h3 {
+  font-family: 'Poiret One', cursive;
+  font-weight: normal;
   text-align: center;
+  font-size: 1.5em;
   margin-bottom: 0;
 }
 
 .Bloc_Equipe_Case h4 {
+  font-family: 'Flamenco', cursive;
   text-align: center;
+  font-size: 1.1em;
   margin-top: 0;
 }
 
 .Bloc_Equipe_Case p {
   width: 90%;
   text-align: center;
+  font-family: Arial;
   margin: auto;
 }
 
@@ -200,18 +242,18 @@ border-radius: 10%;
 /* Bloc Confiance */
 #Bloc_Confiance {
   height: auto;
-  padding-top: 2%;
-  padding-bottom: 2%;
-  border-bottom: solid black 1px;
 }
 
 #Bloc_Confiance h2 {
   width: 100%;
+  margin-bottom: 1.5em;
+  font-family: 'Poiret One', cursive;
+  font-size: 2em;
   text-align: center;
 }
 
 #Bloc_Confiance_Slider {
-  width: 70%;
+  width: 100%;
   height: auto;
   margin-left: auto;
   margin-right: auto;
@@ -230,14 +272,15 @@ border-radius: 10%;
 
 /* Bloc Temoignage */
 #Bloc_Temoin {
+  min-height: 15em;
   height: auto;
-  padding-top: 2%;
-  padding-bottom: 2%;
-  border-bottom: solid black 1px;
+  background-color: #D5D5D5;
 }
 
 #Bloc_Temoin h2 {
   width: 100%;
+  font-size: 2em;
+    font-family: 'Poiret One', cursive;
   text-align: center;
 }
 

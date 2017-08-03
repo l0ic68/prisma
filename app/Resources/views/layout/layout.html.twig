@@ -4,17 +4,20 @@
     <title>Prisma - A propos</title>
     <meta charset="utf-8">
     <link rel="stylesheet" href="{{ asset('CSS/Fixe.css') }}">
+    <link href="https://fonts.googleapis.com/css?family=Flamenco" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
 
     {% block stylesheets %}{% endblock %}
 </head>
 
 <body>
 <header>
-    <div id="Prisma_Logo">
+    <div id="Header_content">
+      <div id="Prisma_Logo">
         <img src="http://www.placehold.it/50x50" alt="Logo Prisma"/>
-        <h1>Prisma</h1>
-    </div>
-    <nav id="Main_Nav">
+        <h1>Com4up</h1>
+      </div>
+      <nav id="Main_Nav">
         <ul>
             <li><a href="{{ asset('app_dev.php/index') }}">Accueil</a></li>
             <li><a href="{{ asset('app_dev.php/services') }}">Services</a></li>
@@ -23,7 +26,13 @@
             <li><a href="{{ asset("app_dev.php/a_propos") }}">A propos</a></li>
             <li><a href="{{ asset('app_dev.php/contact') }}">Contact</a></li>
         </ul>
-    </nav>
+      </nav>
+    </div>
+    <div id="Border_Header">
+      <hr id="Border_Header_left"/>
+      <hr id="Border_Header_middle"/>
+      <hr id="Border_Header_right"/>
+    </div>
 </header>
 {% block body %}{% endblock %}
 
