@@ -41,7 +41,7 @@ class ProjetsData extends AbstractFixture implements OrderedFixtureInterface
         $projet2->setType("Réseaux Sociaux");
         $projet2->setTechnologies("Pourquoi un Float");
         $projet2->setPresentation("Un projet lambda");
-        $projet2->setPicture($this->getReference('facebook'));
+        $projet2->setPicture($this->getReference('twitter'));
         $projet2->setDateSortie(new \DateTime());
         $projet2->setImages("Une photo");
         $projet2->setUrl("URL de quoi ?");
@@ -51,7 +51,7 @@ class ProjetsData extends AbstractFixture implements OrderedFixtureInterface
         $projet3->setProjectBanner("Je sais pas trop");
         $projet3->setNom("Prisma");
         $projet3->setType("Audiovisuel");
-        $projet3->setPicture($this->getReference('inconnu'));
+        $projet3->setPicture($this->getReference('google'));
         $projet3->setTechnologies("Pourquoi un Float");
         $projet3->setPresentation("Un projet lambda");
         $projet3->setDateSortie(new \DateTime());
@@ -65,11 +65,59 @@ class ProjetsData extends AbstractFixture implements OrderedFixtureInterface
         $projet4->setType("Réseaux Sociaux");
         $projet4->setTechnologies("Pourquoi un Float");
         $projet4->setPresentation("Un projet lambda");
-        $projet4->setPicture($this->getReference('carouselMedia5'));
+        $projet4->setPicture($this->getReference('carouselMedia1'));
         $projet4->setDateSortie(new \DateTime());
         $projet4->setImages("Une photo");
         $projet4->setUrl("URL de quoi ?");
         $manager->persist($projet4);
+
+        $projet5 = new Projets();
+        $projet5->setProjectBanner("Je sais pas trop");
+        $projet5->setNom("Prisma");
+        $projet5->setType("Réseaux Sociaux");
+        $projet5->setTechnologies("Pourquoi un Float");
+        $projet5->setPresentation("Un projet lambda");
+        $projet5->setPicture($this->getReference('carouselMedia2'));
+        $projet5->setDateSortie(new \DateTime());
+        $projet5->setImages("Une photo");
+        $projet5->setUrl("URL de quoi ?");
+        $manager->persist($projet5);
+
+        $projet6 = new Projets();
+        $projet6->setProjectBanner("Je sais pas trop");
+        $projet6->setNom("Prisma");
+        $projet6->setType("Réseaux Sociaux");
+        $projet6->setTechnologies("Pourquoi un Float");
+        $projet6->setPresentation("Un projet lambda");
+        $projet6->setPicture($this->getReference('carouselMedia3'));
+        $projet6->setDateSortie(new \DateTime());
+        $projet6->setImages("Une photo");
+        $projet6->setUrl("URL de quoi ?");
+        $manager->persist($projet6);
+
+        $projet7 = new Projets();
+        $projet7->setProjectBanner("Je sais pas trop");
+        $projet7->setNom("Prisma");
+        $projet7->setType("Réseaux Sociaux");
+        $projet7->setTechnologies("Pourquoi un Float");
+        $projet7->setPresentation("Un projet lambda");
+        $projet7->setPicture($this->getReference('carouselMedia4'));
+        $projet7->setDateSortie(new \DateTime());
+        $projet7->setImages("Une photo");
+        $projet7->setUrl("URL de quoi ?");
+        $manager->persist($projet7);
+
+        $projet8 = new Projets();
+        $projet8->setProjectBanner("Je sais pas trop");
+        $projet8->setNom("Prisma");
+        $projet8->setType("Réseaux Sociaux");
+        $projet8->setTechnologies("Pourquoi un Float");
+        $projet8->setPresentation("Un projet lambda");
+        $projet8->setPicture($this->getReference('facebook'));
+        $projet8->setDateSortie(new \DateTime());
+        $projet8->setImages("Une photo");
+        $projet8->setUrl("URL de quoi ?");
+        $manager->persist($projet8);
 
         $manager->flush();
 
