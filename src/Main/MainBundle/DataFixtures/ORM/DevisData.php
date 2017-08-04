@@ -18,13 +18,7 @@ class DevisData extends AbstractFixture implements OrderedFixtureInterface
 {
     public function load(ObjectManager $manager)
     {
-        $devis1 = new Devis();
-        $devis1->setContenuDevis("contenue");
-        $manager->persist($devis1);
 
-        $manager->flush();
-
-        $this->addReference('devis1',$devis1);
 
     }
 

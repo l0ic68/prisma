@@ -20,43 +20,43 @@ class MediaData extends AbstractFixture implements OrderedFixtureInterface
     public function load(ObjectManager $manager)
     {
         $email = new Media();
-        $email->setPath('img/email.png');
-        $email->setUrl('email.png');
+        $email->setPath('img/skyrim2.jpg');
+        $email->setUrl('skyrim2.jpg');
         $manager->persist($email);
 
         $facebook = new Media();
-        $facebook->setPath('img/facebook.png');
-        $facebook->setUrl('facebook.png');
+        $facebook->setPath('img/skyrim.jpg');
+        $facebook->setUrl('skyrim.jpg');
         $manager->persist($facebook);
 
         $google = new Media();
-        $google->setPath('img/google.png');
-        $google->setUrl('google.png');
+        $google->setPath('img/cs.jpg');
+        $google->setUrl('cs.jpg');
         $manager->persist($google);
 
         $twitter = new Media();
-        $twitter->setPath('img/twitter.png');
-        $twitter->setUrl('twitter.png');
+        $twitter->setPath('img/bioshock.jpg');
+        $twitter->setUrl('bioshock.jpg');
         $manager->persist($twitter);
 
         $carouselMedia1 = new Media();
-        $carouselMedia1->setPath('img/1.jpg');
-        $carouselMedia1->setUrl('1.jpg');
+        $carouselMedia1->setPath('img/witcher.jpg');
+        $carouselMedia1->setUrl('witcher.jpg');
         $manager->persist($carouselMedia1);
 
         $carouselMedia2 = new Media();
-        $carouselMedia2->setPath('img/2.jpg');
-        $carouselMedia2->setUrl('2.jpg');
+        $carouselMedia2->setPath('img/half.jpg');
+        $carouselMedia2->setUrl('half.jpg');
         $manager->persist($carouselMedia2);
 
         $carouselMedia3 = new Media();
-        $carouselMedia3->setPath('img/3.jpg');
-        $carouselMedia3->setUrl('3.jpg');
+        $carouselMedia3->setPath('img/deus.jpg');
+        $carouselMedia3->setUrl('deus.jpg');
         $manager->persist($carouselMedia3);
 
         $carouselMedia4 = new Media();
-        $carouselMedia4->setPath('img/4.jpg');
-        $carouselMedia4->setUrl('4.jpg');
+        $carouselMedia4->setPath('img/aperture.jpg');
+        $carouselMedia4->setUrl('aperture.jpg');
         $manager->persist($carouselMedia4);
 
         $carouselMedia5 = new Media();
@@ -104,6 +104,7 @@ class MediaData extends AbstractFixture implements OrderedFixtureInterface
         $this->addReference('email',$email);
         $this->addReference('facebook',$facebook);
         $this->addReference('google',$google);
+        $this->addReference('twitter',$twitter);
         $this->addReference('carouselMedia1',$carouselMedia1);
         $this->addReference('carouselMedia2',$carouselMedia2);
         $this->addReference('carouselMedia3',$carouselMedia3);
