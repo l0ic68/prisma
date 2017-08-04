@@ -113,6 +113,7 @@ header {
   margin: 0;
   padding: 0;
 }
+
 /* Section, corp du site */
 section {
   margin: 0;
@@ -123,10 +124,46 @@ section {
 }
 
 /* Footer */
+
+#Border_Footer {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+  padding: 0;
+}
+
+.Border_Footer_left {
+  width: 8.33%;
+  border: solid 2px red;
+  margin: 0;
+  padding: 0;
+}
+.Border_Footer_middle {
+  width: 8.33%;
+  border: solid 2px green;
+  margin: 0;
+  padding: 0;
+}
+.Border_Footer_right {
+  width: 8.33%;
+  border: solid 2px blue;
+  margin: 0;
+  padding: 0;
+}
+
 footer {
   width: 100%;
-  border-top: solid black 1px;
-  background-color: grey;
+  background-color: #313131;
+  color: white;
+  display:flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+#Footer_content {
+  width: 100%;
   display:flex;
   flex-direction: row;
   justify-content: space-around;
@@ -134,27 +171,35 @@ footer {
 
 #Footer_Prisma, #Footer_contact, #Footer_Social, #Footer_Legal {
   width: 25%;
-  border-right: dashed black 1px;
-  text-align: center;
+  font-family: Arial;
+  padding-left: 2%;
+  padding-right: 2%;
 }
 
 #Footer_Prisma p {
-  width: 60%;
-  margin-left: auto;
-  margin-right: auto;
+  font-family: 'Poiret One', cursive;
+  width: 50%;
 }
 
-.Footer_Social {
+#Footer_contact p {
+    margin: 0;
+}
+
+#Footer_Social_img {
   width: 100%;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: flex-start;
 }
 
-.Footer_Social img {
-width: auto;
-height: auto;
-border-radius: 10%;
+#Footer_Social_ico i {
+margin: 0;
+font-size: 2em;
+margin-left: 1%;
+}
+
+#Footer_Legal p {
+    margin: 0;
 }
 
 /* Pour les écrans inférieurs à 1024px de large */

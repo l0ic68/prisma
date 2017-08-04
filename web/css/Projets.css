@@ -2,39 +2,36 @@
 
 /* Header banner */
 #Service_Banner {
-  height: 15em;
+  height: 20em;
   width: 100%;
-}
-
-#Service_Banner img {
-  width: 100%;
-  height: 100%;
-  padding: 0;
-  margin: 0;
+  background-size: cover;
+  background-position: center;
+  background-image: url("../img/Background_Service.jpg");
 }
 
 /* Bloc Travaux Recent */
 #Bloc_Travaux {
   height: auto;
-  padding-top: 2%;
   padding-bottom: 2%;
   margin-bottom: 5%;
 }
 
 #Bloc_Travaux_Content {
-  width: 60%;
+  width: 100%;
   height: auto;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 #Travaux_Header h2 {
   width: 100%;
+  font-family: 'Poiret One', cursive;
+  font-size: 2em;
+  color: Black;
   text-align: center;
 }
 
 #Travaux_Header ul {
-  width: 80%;
+  width: 60%;
+  margin-top: 0;
   margin-left: auto;
   margin-right: auto;
   list-style-type: none;
@@ -42,6 +39,15 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
+  font-size: 1.3em;
+  font-family: 'Flamenco', cursive;
+}
+
+#Travaux_Header ul li button{
+  font-family: 'Flamenco', cursive;
+  font-size: 1em;
+  background-color: #DCDCDC;
+  border: none;
 }
 
 #Travaux_Slider {
@@ -51,8 +57,8 @@
 }
 
 #Travaux_Slider a {
-  height: auto;
   width: 25%;
+  height: 14em;
   margin: 0;
   padding: 0;
 }

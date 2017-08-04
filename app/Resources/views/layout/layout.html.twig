@@ -3,7 +3,8 @@
 <head>
     <title>Prisma - A propos</title>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="{{ asset('CSS/Fixe.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/Fixe.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/font_awesome.css') }}">
     <link href="https://fonts.googleapis.com/css?family=Flamenco" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
 
@@ -37,29 +38,48 @@
 {% block body %}{% endblock %}
 
 <footer>
-    <div id="Footer_Prisma">
-        <h2>Prisma</h2>
-        <p>Agence Web / audiovisuel, accompagnant votre entreprise vers le numerique.</p>
-    </div>
-    <div id="Footer_contact">
-        <h2>Contact</h2>
-        <p>Adresse</p>
-        <p>Mail</p>
-        <p>Telephone</p>
-    </div>
-    <div id="Footer_Social">
-        <h2>Social</h2>
-        <div class="Equipe_Social">
-            <img src="http://www.placehold.it/50x50" alt="Icone Facebook">
-            <img src="http://www.placehold.it/50x50" alt="Icone Twitter">
-            <img src="http://www.placehold.it/50x50" alt="Icone Instagram">
-            <img src="http://www.placehold.it/50x50" alt="Icone Youtube">
-        </div>
-    </div>
-    <div id="Footer_Legal">
-        <h2>Legal</h2>
-        <p>Mention Legale</p>
-        <p>Copyright</p>
+  <div id="Border_Footer">
+    <hr class="Border_Footer_left"/>
+    <hr class="Border_Footer_middle"/>
+    <hr class="Border_Footer_right"/>
+    <hr class="Border_Footer_left"/>
+    <hr class="Border_Footer_middle"/>
+    <hr class="Border_Footer_right"/>
+    <hr class="Border_Footer_left"/>
+    <hr class="Border_Footer_middle"/>
+    <hr class="Border_Footer_right"/>
+    <hr class="Border_Footer_left"/>
+    <hr class="Border_Footer_middle"/>
+    <hr class="Border_Footer_right"/>
+    <hr class="Border_Footer_left"/>
+    <hr class="Border_Footer_middle"/>
+    <hr class="Border_Footer_right"/>
+  </div>
+  <div id="Footer_content">
+      <div id="Footer_Prisma">
+          <h2>Com4Up</h2>
+          <p>Agence Web / audiovisuel, accompagnant votre entreprise vers le numerique.</p>
+      </div>
+      <div id="Footer_contact">
+          <h2>Contact</h2>
+          <p>Adresse</p>
+          <p>Mail</p>
+          <p>Telephone</p>
+      </div>
+      <div id="Footer_Social">
+          <h2>Social</h2>
+          <div id="Footer_Social_ico">
+            <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+            <i class="fa fa-facebook-square" aria-hidden="true"></i>
+            <i class="fa fa-twitter-square" aria-hidden="true"></i>
+            <i class="fa fa-instagram" aria-hidden="true"></i>
+          </div>
+      </div>
+      <div id="Footer_Legal">
+          <h2>Legal</h2>
+          <p>Mention Legale</p>
+          <p>Copyright</p>
+      </div>
     </div>
 </footer>
 <script src="{{ asset ('js/jquery.js') }}"></script>

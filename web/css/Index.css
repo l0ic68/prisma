@@ -30,11 +30,13 @@
 
 #Bloc_Audiovisuel {
   background-size: cover;
+  background-position: center;
   background-image: url("../img/Background_Service_Audiovisuel.jpg");
 }
 
 #Bloc_Social {
   background-size: cover;
+  background-position: center;
   background-image: url("../img/Background_Service_Social.jpg");
 }
 
@@ -45,6 +47,7 @@
 
 #Bloc_Materiel {
   background-size: cover;
+  background-position: center;
   background-image: url("../img/Background_Service_Materiel.jpg");
 }
 
@@ -76,6 +79,13 @@
   text-decoration: none;
   color: black;
   font-family: 'Flamenco', cursive;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-left: 2%;
+  padding-right: 2%;
   font-size: 1.5em;
 }
 
@@ -84,19 +94,19 @@
 }
 
 #Bloc_Audiovisuel .Service_Plus {
-  background-color: #03B22E;
+  background-color: #21B556;
 }
 
 #Bloc_Social .Service_Plus {
-  background-color: #19FFF0;
+  background-color: #4E72FF;
 }
 
 #Bloc_Graphique .Service_Plus {
-  background-color: #FF5600;
+  background-color: #DE5621;
 }
 
 #Bloc_Materiel .Service_Plus {
-  background-color: #6B01B2;
+  background-color: #8166BD;
 }
 
 /* Bloc Travaux Recent */
@@ -119,7 +129,7 @@
 }
 
 #Travaux_Header ul {
-  width: 30%;
+  width: 60%;
   margin-top: 0;
   margin-left: auto;
   margin-right: auto;
@@ -168,6 +178,7 @@
   margin: 0;
   background-color: #D5D5D5;
   height: auto;
+  padding-bottom: 1em;
 }
 
 #Bloc_Equipe h2 {
@@ -194,11 +205,20 @@
 .Bloc_Equipe_Case {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   align-items: center;
   width: 20%;
 }
 
-.Bloc_Equipe_Case img {
+.Bloc_Equipe_Case_text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.Bloc_Equipe_Case_text img {
   width: 70%;
   height: auto;
   border-radius: 100%;
@@ -223,22 +243,21 @@
   width: 90%;
   text-align: center;
   font-family: Arial;
-  margin: auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .Equipe_Social {
-  width: 100%;
+  width: 50%;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: center;
 }
 
-.Equipe_Social img {
-width: auto;
-height: auto;
-border-radius: 10%;
+.Equipe_Social i {
+  padding: 1%;
+  font-size: 2em;
 }
-
 /* Bloc Confiance */
 #Bloc_Confiance {
   height: auto;
@@ -263,6 +282,11 @@ border-radius: 10%;
   align-items: center;
 }
 
+#Bloc_Confiance_Slider i {
+  font-size: 4em;
+  padding: 2%;
+}
+
 #Bloc_Confiance_data {
   width: 80%;
   display: flex;
@@ -272,7 +296,8 @@ border-radius: 10%;
 
 /* Bloc Temoignage */
 #Bloc_Temoin {
-  min-height: 15em;
+  min-height: 20em;
+  padding-top: 1em;
   height: auto;
   background-color: #D5D5D5;
 }
@@ -310,6 +335,7 @@ border-radius: 10%;
 
 .Bloc_Temoin_Case p {
   width: 90%;
+  font-family: Arial;
   text-align: center;
   margin: auto;
 }
@@ -336,6 +362,7 @@ border-radius: 10%;
 .Bloc_Temoin_ID_Name p, .Bloc_Temoin_ID_Name h3{
   margin: 0;
   padding: 0;
+  font-family: Arial;
   text-align: left;
 }
 

@@ -5,32 +5,31 @@
 {% block body %}
     <section>
         <div id="Service_Banner">
-            <img src="http://www.placehold.it/1280x200" alt="Banniere service"/>
         </div>
         <div id="Bloc_Travaux">
-            <div id="Bloc_Travaux_Content">
-                <div id="Travaux_Header">
-                    <h2>Travaux Récents</h2>
-                    <ul>
-                        <li><button class="search" value="Tous">Tous</button></li>
-                        /
-                        <li><button class="search" value="Site Web">Site Web</button></li>
-                        /
-                        <li><button class="search" value="Maquette">Maquette</button></li>
-                        /
-                        <li><button class="search" value="Audiovisuel">Audiovisuel</button></li>
-                        /
-                        <li><button class="search" value="Réseaux Sociaux">Réseaux Sociaux</button></li>
-                    </ul>
-                </div>
-                <div id="Travaux_Slider">
-                    {% for projet in projets %}
-                        <a href="{{ path('projet_detail', { 'id': projet.id }) }}">
-                            <img src="{{ asset(projet.picture.path) }}" alt="Image du slider"/>
-                        </a>
-                   {% endfor %}
-                </div>
+        <div id="Bloc_Travaux_Content">
+            <div id="Travaux_Header">
+                <h2>Travaux Récents</h2>
+                <ul>
+                    <li><button class="search" value="Tous">Tous</button></li>
+                    /
+                    <li><button class="search" value="Site Web">Site Web</button></li>
+                    /
+                    <li><button class="search" value="Maquette">Maquette</button></li>
+                    /
+                    <li><button class="search" value="Audiovisuel">Audiovisuel</button></li>
+                    /
+                    <li><button class="search" value="Réseaux Sociaux">Réseaux Sociaux</button></li>
+                </ul>
             </div>
+            <div id="Travaux_Slider">
+                {% for projet in projets | slice(0,10)%}
+                    <a href="{{ path('projet_detail', { 'id': projet.id }) }}">
+                        <img src="{{ asset(projet.picture.path) }}" alt="Image du slider"/>
+                    </a>
+                {% endfor %}
+            </div>
+        </div>
         </div>
     </section>
     {% block javascripts %}

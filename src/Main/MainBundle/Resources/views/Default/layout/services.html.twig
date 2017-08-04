@@ -5,22 +5,27 @@
 {% block body %}
     <section>
         <div id="Service_Banner">
-            <img src="http://www.placehold.it/1280x200" alt="Banniere service"/>
         </div>
-        <div id="Service_Map">
-            <div id="Service_Map_Content">
-                <div class="Service_Map_Case">
-                    <a href="Web_Detail.html"><img src="http://www.placehold.it/1280x200" alt="Image lien site web detail"/></a>
-                </div>
-                <div class="Service_Map_Case">
-                    <a href="Audiovisuel_Detail.html"><img src="http://www.placehold.it/1280x200" alt="Image lien audiovisuel detail"/></a>
-                </div>
-                <div class="Service_Map_Case">
-                    <a href="Social_Detail.html"><img src="http://www.placehold.it/1280x200" alt="Image lien social detail"/></a>
-                </div>
-                <div class="Service_Map_Case">
-                    <a href="Graphic_Detail.html"><img src="http://www.placehold.it/1280x200" alt="Image lien charte graphique detail"/></a>
-                </div>
+        <div id="Bloc_Service_Content">
+            <div class="Bloc_Service_case" id="Bloc_Web">
+                <h2>Site Web</h2>
+                <div class="Service_Plus"><a href="{{ path('web_detail') }}">En savoir plus...</a></div>
+            </div>
+            <div class="Bloc_Service_case" id="Bloc_Audiovisuel">
+                <h2>Audiovisuel</h2>
+                <div class="Service_Plus"><a href="{{ path('audiovisuel_detail') }}">En savoir plus...</a></div>
+            </div>
+            <div class="Bloc_Service_case" id="Bloc_Social">
+                <h2>Réseaux Sociaux</h2>
+                <div class="Service_Plus"><a href="{{ path('reseau_detail') }}">En savoir plus...</a></div>
+            </div>
+            <div class="Bloc_Service_case" id="Bloc_Graphique">
+                <h2>Charte Graphique</h2>
+                <div class="Service_Plus"><a href="{{ path('graphic_detail') }}">En savoir plus...</a></div>
+            </div>
+            <div class="Bloc_Service_case" id="Bloc_Materiel">
+                <h2>Matériel</h2>
+                <div class="Service_Plus"><a href="{{ path('materiel_detail') }}">En savoir plus...</a></div>
             </div>
         </div>
     </section>

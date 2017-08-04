@@ -2,15 +2,11 @@
 
 /* Header banner */
 #Service_Banner {
-  height: 15em;
+  height: 20em;
   width: 100%;
-}
-
-#Service_Banner img {
-  width: 100%;
-  height: 100%;
-  padding: 0;
-  margin: 0;
+  background-size: cover;
+  background-position: center;
+  background-image: url("../img/Background_Service.jpg");
 }
 
 /* Services Map */
@@ -19,26 +15,107 @@
   height: auto;
 }
 
-#Service_Map_Content {
+#Bloc_Service_Content {
   width: 100%;
-  height: 60vh;
+  height: auto;
   display: flex;
   flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
 }
 
-.Service_Map_Case {
+.Bloc_Service_case {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   width: 20%;
-  height: 100%;
+  height: 34em;
 }
 
-.Service_Map_Case:hover {
-  opacity: 0.5;
+#Bloc_Web {
+  background-size: cover;
+  background-image: url("../img/Background_Service_Web.jpg");
 }
 
-.Service_Map_Case img {
-  margin: auto;
+#Bloc_Audiovisuel {
+  background-size: cover;
+  background-position: center;
+  background-image: url("../img/Background_Service_Audiovisuel.jpg");
+}
+
+#Bloc_Social {
+  background-size: cover;
+  background-position: center;
+  background-image: url("../img/Background_Service_Social.jpg");
+}
+
+ #Bloc_Graphique {
+   background-size: cover;
+   background-image: url("../img/Background_Service_Graphique.jpg");
+}
+
+#Bloc_Materiel {
+  background-size: cover;
+  background-position: center;
+  background-image: url("../img/Background_Service_Materiel.jpg");
+}
+
+.Bloc_Service_case h2 {
+  height: 100% !important;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  color: white;
+  margin: 0;
+  background-color: rgba(0,0,0,0.4);
+  font-family: 'Poiret One', cursive;
+  text-decoration: underline;
+}
+
+.Service_Plus {
+  width: 100%;
+  margin: 0;
+  padding-top: 3%;
+  padding-bottom: 3%;
+  border-top: solid black 1px;
+  background-color: grey;
+}
+
+.Service_Plus a {
+  text-decoration: none;
+  color: black;
+  font-family: 'Flamenco', cursive;
+  width: 100%;
   height: 100%;
-  width:100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-left: 2%;
+  padding-right: 2%;
+  font-size: 1.5em;
+}
+
+#Bloc_Web .Service_Plus {
+  background-color: #B2000B;
+}
+
+#Bloc_Audiovisuel .Service_Plus {
+  background-color: #21B556;
+}
+
+#Bloc_Social .Service_Plus {
+  background-color: #4E72FF;
+}
+
+#Bloc_Graphique .Service_Plus {
+  background-color: #DE5621;
+}
+
+#Bloc_Materiel .Service_Plus {
+  background-color: #8166BD;
 }
 
 /* Pour les écrans inférieurs à 1024px de large */
