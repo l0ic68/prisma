@@ -1,14 +1,20 @@
 {% extends "::layout/layout.html.twig" %}
 {% block stylesheets %}
   <link rel="stylesheet" href="{{ asset('CSS/Projet_Detail.css') }}">
-  <link rel="stylesheet" href="{{ asset('https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css') }}">
+  <!-- <link rel="stylesheet" href="{{ asset('https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css') }}"> -->
 {% endblock %}
 {% block body %}
-    <section>
-      <h2 id="Projet_Banner">
-        <img src="http://www.placehold.it/1280x200" alt="Banniere projet"/>
-      </h2>
+    <section id="section">
+    <div id="Service_Banner">
+      </div>
       <div id="Projet_Corp">
+        <div id="Projet_nav">
+        <a href="{{ path('projets') }}"><i class="fa fa-th-large" aria-hidden="true"></i></a>
+          <div id="Projet_arrow">
+            <i class="fa fa-arrow-circle-left" aria-hidden="true"></i>
+            <i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
+          </div>
+        </div>
         <div id="Bloc_ID">
           <h2>{{ projet.nom }}</h2>
           <h3>{{ projet.type }}</h3>
@@ -33,53 +39,40 @@
         <div id="Bloc_Description">
           <p>{{ projet.presentation }}</p>
         </div>
-        <div class="row CarouselModalAction">
-          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-            <div id="myCarousel" class="carousel slide col-xs-12 col-sm-12 col-md-12 col-lg-12 test7" data-ride="carousel">
-              <!-- Indicators -->
-              <ol class="carousel-indicators">
-                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                  {% if not projet.media.empty %}
-                      {% for media in projet.media %}
-                        <li data-target="#myCarousel" data-slide-to="{{ loop.index }}"></li>
-                      {% endfor %}
-                  {% endif %}
-              </ol>
 
-              <!-- Wrapper for slides -->
-
-              <div class="carousel-inner centrageD">
-                <div class="item active" style="width: 100%;">
-                  <img class="ImageActionCarouselModal d-block img-fluid" src="{{ asset('img/1.jpg') }}" alt="Los Angeles">
-                </div>
-                  {% if not projet.media.empty %}
-                      {% for media in projet.media %}
-                        <div class="item" style="width: 100%;">
-                          <img  class="ImageActionCarouselModal d-block img-fluid" src="{{ asset(media.path) }}">
-                        </div>
-                      {% endfor %}
-                  {% endif %}
-
-              </div>
-
-              <!-- Left and right controls -->
-              <a class="left carousel-control" href="#myCarousel" data-slide="prev" style="background: none;">
-                <span class="glyphicon glyphicon-chevron-left"></span>
-                <span class="sr-only">Previous</span>
-              </a>
-              <a class="right carousel-control" href="#myCarousel" data-slide="next" style="background: none;">
-                <span class="glyphicon glyphicon-chevron-right"></span>
-                <span class="sr-only">Next</span>
-              </a>
+        <div id="Bloc_Slider">
+          <button class='toggle' data-toggle='prev'><i class="fa fa-chevron-left" aria-hidden="true"></i></button>
+            <div class='container'>
+              <ul class='carousel is-set'>
+                <li class='carousel-seat'>
+                  <h2>1</h2>
+                </li>
+                <li class='carousel-seat'>
+                  <h2>2</h2>
+                </li>
+                <li class='carousel-seat'>
+                  <h2>3</h2>
+                </li>
+                <li class='carousel-seat'>
+                  <h2>4</h2>
+                </li>
+                <li class='carousel-seat'>
+                  <h2>5</h2>
+                </li>
+                <li class='carousel-seat is-ref'>
+                  <h2>6</h2>
+                </li>
+              </ul>
             </div>
-          </div>
+          <button class='toggle' data-toggle='next'><i class="fa fa-chevron-right" aria-hidden="true"></i></button>
         </div>
+
         <div id="Bloc_Link">
-          <a href="{{ projet.url }}">Voir le projet</a>
-        </div>
-        <div id="Bloc_Retour">
-          <a href="{{ path('projets') }}">Retour au portfolio</a>
+          <a href="{{ projet.url }}">Voir le projet<i class="fa fa-external-link" aria-hidden="true"></i></a>
         </div>
       </div>
     </section>
+    {% block javascripts %}
+      <script src="{{ asset ('js/Projet_Detail.js') }}"></script>
+    {% endblock %}
 {% endblock %}

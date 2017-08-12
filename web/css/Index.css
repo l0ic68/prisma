@@ -149,6 +149,10 @@
   border: none;
 }
 
+#Travaux_Header ul li button:focus {
+  border: none;
+}
+
 #Travaux_Slider {
   display: flex;
   flex-direction: row;
@@ -255,12 +259,18 @@
 }
 
 .Equipe_Social i {
-  padding: 1%;
+  padding: 2%;
   font-size: 2em;
 }
 /* Bloc Confiance */
 #Bloc_Confiance {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
   height: auto;
+  padding-bottom: 1em;
 }
 
 #Bloc_Confiance h2 {
@@ -271,27 +281,102 @@
   text-align: center;
 }
 
-#Bloc_Confiance_Slider {
-  width: 100%;
-  height: auto;
-  margin-left: auto;
-  margin-right: auto;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-}
-
-#Bloc_Confiance_Slider i {
-  font-size: 4em;
-  padding: 2%;
-}
-
-#Bloc_Confiance_data {
+.container {
   width: 80%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.carousel {
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
+  left: -100%;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  transform: translateX(100%);
+}
+
+@media (min-width: 30em) {
+  .carousel {
+    left: -50%;
+    transform: translateX(50%);
+  }
+}
+
+@media (min-width: 40em) {
+  .carousel {
+    left: -33.33333%;
+    transform: translateX(33.33333%);
+  }
+}
+
+.carousel.is-reversing {
+  transform: translateX(-100%);
+}
+
+@media (min-width: 30em) {
+  .carousel.is-reversing {
+    transform: translateX(-50%);
+  }
+}
+
+@media (min-width: 40em) {
+  .carousel.is-reversing {
+    transform: translateX(-33.33333%);
+  }
+}
+
+.carousel.is-set {
+  transform: none;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-seat {
+  background: #ddd;
+  flex: 1 0 100%;
+  order: 2;
+}
+
+.carousel-seat:nth-child(even) {
+  background: #d5d5d5;
+}
+
+@media (min-width: 30em) {
+  .carousel-seat {
+    flex-basis: 50%;
+  }
+}
+
+@media (min-width: 40em) {
+  .carousel-seat {
+    flex-basis: 33.33333%;
+  }
+}
+
+.carousel-seat.is-ref {
+  order: 1;
+}
+
+.carousel h2 {
+  color: #aaa;
+  font-size: 7em;
+  font-weight: normal;
+  margin: 0;
+  padding: 0.6em 0;
+  text-align: center;
+}
+
+.controls {
+  padding: 1em;
+  text-align: center;
+}
+
+.toggle {
+  border: none;
+  color: black;
+  padding: 0.5em 1em;
+  font-size: 1.5em;
 }
 
 /* Bloc Temoignage */

@@ -1,15 +1,14 @@
 {% extends "::layout/layout.html.twig" %}
 {% block stylesheets %}
-  <link rel="stylesheet" href="{{ asset('CSS/Service_Detail.css') }}">
+  <link rel="stylesheet" href="{{ asset('css/Web_Detail.css') }}">
 {% endblock %}
 {% block body %}
     <section>
-      <div id="Service_Banner">
-        <img src="http://www.placehold.it/1280x200" alt="Banniere service"/>
-      </div>
+    <div id="Service_Banner">
+    </div>
       <nav id="Service_Nav">
         <ul>
-          <li id="Web_Current"><a href="#">Site Web</a></li>
+          <li id="Web"><a href="#" id="Service_Current">Site Web</a></li>
           <li id="Audiovisuel"><a href="{{ path('audiovisuel_detail') }}">Audiovisuel</a></li>
           <li id="Social"><a href="{{ path('reseau_detail') }}">Reseaux Sociaux</a></li>
           <li id="Graphic"><a href="{{ path('graphic_detail') }}">Charte Graphique</a></li>
@@ -17,80 +16,158 @@
         </ul>
       </nav>
       <div id="Service_Web">
-        <div id="Service_Header">
-          <p id="Service_Header_Text">Une part de votre identité. Gage de sérieux et de professionnalisme. Toute les informations importantes de votre entreprise. genre ça serai cool de caser dans un coin qu'on peu leur faire un espace client, safe, des utilisateur ect</p>
-          <p><a href="Estimation.html">Faire une estimation</a></p>
+        <div id="Estimation_link">
+          <a href="Estimation.html">Faire une estimation</a>
         </div>
-        <div id="Service_Content">
-          <div class="Service_Box">
-            <img src="http://www.placehold.it/50x50" alt="#">
-            <h2>Expérience Utilisateur (UX)</h2>
-            <ul>
-              <li>Adapter à votre projet</li>
-              <li>Correspond à vos besoins</li>
-              <li>Ergonomique</li>
-              <li>Navigation intuitif</li>
-              <li>Augmentation de l'attractivité</li>
-              <li>Durée de visite accrue</li>
-            </ul>
-          </div>
-          <div class="Service_Box">
-            <img src="http://www.placehold.it/50x50" alt="#">
-            <h2>Responsive</h2>
-            <p>65% des français ont un smartphone et passent 1 Heure par jour sur Internet sur leur mobile, (actualiser chiffre) c'est pour cela qu'il faut rendre le site redimensionnable sur :</p>
-            <ul>
-              <li>PC</li>
-              <li>TV</li>
-              <li>Tablette</li>
-              <li>Smartphone</li>
-            </ul>
-          </div>
-          <div class="Service_Box">
-            <img src="http://www.placehold.it/50x50" alt="#">
-            <h2>Qui vous correspond</h2>
-            <p>Sur mesure : Proposez votre idée, nous vous créerons une maquette correspondante à vos besoins, par exemple :</p>
-            <ul>
-              <li>Vitrine / Portfolio</li>
-              <li>E-Commerce</li>
-              <li>Blog</li>
-              <li>Smartphone</li>
-            </ul>
-          </div>
-          <div class="Service_Box">
-            <img src="http://www.placehold.it/50x50" alt="#">
-            <h2>Technologie modernes</h2>
-            <ul>
-              <li>HTML5</li>
-              <li>CSS3</li>
-              <li>Javascript</li>
-              <li>Prestashop</li>
-              <li>CMS: Wordpress/Drupal</li>
-            </ul>
-          </div>
-          <div class="Service_Box">
-            <img src="http://www.placehold.it/50x50" alt="#">
-            <h2>Référencement (SEO) et Publicité</h2>
-            <ul>
-              <li>Optimisation du référencement de votre site</li>
-              <li>Votre site dans les premiere pages sur Google</li>
-              <li>Formation au référencement</li>
-            </ul>
-            <ul>
-              <li>Diffusion d'annonces</li>
-              <li>Ajout de pub sur votre site</li>
-              <li>Newsletter</li>
-            </ul>
-          </div>
-          <div class="Service_Box">
-            <img src="http://www.placehold.it/50x50" alt="#">
-            <h2>Maintenance</h2>
-            <ul>
-              <li>SAV</li>
-              <li>Hebergement</li>
-              <li>SEO</li>
-            </ul>
-          </div>
+
+
+
+        <div id="Bloc_Slider">
+                    <div class='container'>
+                      <ul class='carousel is-set'>
+
+                        <li class='carousel-seat'>
+                        <div class="service_header">
+                        <i class="fa fa-pencil" aria-hidden="true" id="ico_header"></i>
+                          <div class="service_header_title">
+                            <i class="fa fa-chevron-left toggle" data-toggle='prev' aria-hidden="true"></i>
+                            <h2>Pourquoi avoir un site internet ?</h2>
+                            <i class="fa fa-chevron-right toggle" data-toggle='next' aria-hidden="true"></i>
+                            </div>
+                          </div>
+                          <div class="Service_Section_Content">
+                          <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+                          </div>
+                        </li>
+
+                        <li class='carousel-seat'>
+                        <div class="service_header">
+                          <i class="fa fa-pencil" aria-hidden="true" id="ico_header"></i>
+                          <div class="service_header_title">
+                            <i class="fa fa-chevron-left toggle" data-toggle='prev' aria-hidden="true"></i>
+                            <h2>Expérience Utilisateur (UX)</h2>
+                            <i class="fa fa-chevron-right toggle" data-toggle='next' aria-hidden="true"></i>
+                          </div>
+                        </div>
+                        <div class="Service_Section_Content">
+                          <ul>
+                            <li>Adapter à votre projet</li>
+                            <li>Correspond à vos besoins</li>
+                            <li>Ergonomique</li>
+                            <li>Navigation intuitif</li>
+                            <li>Augmentation de l'attractivité</li>
+                            <li>Durée de visite accrue</li>
+                          </ul>
+                        </div>
+                        </li>
+
+                        <li class='carousel-seat'>
+                        <div class="service_header">
+                          <i class="fa fa-pencil" aria-hidden="true" id="ico_header"></i>
+                          <div class="service_header_title">
+                            <i class="fa fa-chevron-left toggle" data-toggle='prev' aria-hidden="true"></i>
+                            <h2>Responsive</h2>
+                            <i class="fa fa-chevron-right toggle" data-toggle='next' aria-hidden="true"></i>
+                          </div>
+                          </div>
+                          <div class="Service_Section_Content">
+                          <ul>
+                            <li>PC</li>
+                            <li>TV</li>
+                            <li>Tablette</li>
+                            <li>Smartphone</li>
+                          </ul>
+                        </div>
+                        </li>
+
+                        <li class='carousel-seat'>
+                        <div class="service_header">
+                          <i class="fa fa-user" aria-hidden="true" id="ico_header"></i>
+                          <div class="service_header_title">
+                            <i class="fa fa-chevron-left toggle" data-toggle='prev' aria-hidden="true"></i>
+                            <h2>Qui vous correspond</h2>
+                            <i class="fa fa-chevron-right toggle" data-toggle='next' aria-hidden="true"></i>
+                            </div>
+                          </div>
+                          <div class="Service_Section_Content">
+                          <ul>
+                            <li>Vitrine / Portfolio</li>
+                            <li>E-Commerce</li>
+                            <li>Blog</li>
+                            <li>Smartphone</li>
+                          </ul>
+                          </div>
+                        </li>
+
+                        <li class='carousel-seat'>
+                        <div class="service_header">
+                          <i class="fa fa-pencil" aria-hidden="true" id="ico_header"></i>
+                          <div class="service_header_title">
+                            <i class="fa fa-chevron-left toggle" data-toggle='prev' aria-hidden="true"></i>
+                            <h2>Technologies modernes</h2>
+                            <i class="fa fa-chevron-right toggle" data-toggle='next' aria-hidden="true"></i>
+                            </div>
+                          </div>
+                          <div class="Service_Section_Content">
+                          <ul>
+                            <li>HTML5</li>
+                            <li>CSS3</li>
+                            <li>Javascript</li>
+                            <li>Prestashop</li>
+                            <li>CMS: Wordpress/Drupal</li>
+                          </ul>
+                          </div>
+                        </li>
+
+                        <li class='carousel-seat'>
+                        <div class="service_header">
+                          <i class="fa fa-pencil" aria-hidden="true" id="ico_header"></i>
+                          <div class="service_header_title">
+                            <i class="fa fa-chevron-left toggle" data-toggle='prev' aria-hidden="true"></i>
+                            <h2>Maintenance</h2>
+                            <i class="fa fa-chevron-right toggle" data-toggle='next' aria-hidden="true"></i>
+                            </div>
+                          </div>
+                          <div class="Service_Section_Content">
+                          <ul>
+                            <li>SAV</li>
+                            <li>Hebergement</li>
+                            <li>SEO</li>
+                          </ul>
+                          </div>
+                          </li>
+
+                        <li class='carousel-seat is-ref'>
+                        <div class="service_header">
+                          <i class="fa fa-pencil" aria-hidden="true" id="ico_header"></i>
+                          <div class="service_header_title">
+                            <i class="fa fa-chevron-left toggle" data-toggle='prev' aria-hidden="true"></i>
+                            <h2>Refferencement (SEO) et publicité</h2>
+                            <i class="fa fa-chevron-right toggle" data-toggle='next' aria-hidden="true"></i>
+                            </div>
+                          </div>
+                          <div class="Service_Section_Content">
+                          <ul>
+                            <li>Optimisation du référencement de votre site</li>
+                            <li>Votre site dans les premiere pages sur Google</li>
+                            <li>Formation au référencement</li>
+                          </ul>
+                          <ul>
+                            <li>Diffusion d'annonces</li>
+                            <li>Ajout de pub sur votre site</li>
+                            <li>Newsletter</li>
+                          </ul>
+                          </div>
+                        </li>
+
+                      </ul>
+                    </div>
+                </div>
         </div>
       </div>
+      </div>
     </section>
+    {% block javascripts %}
+      <script src="{{ asset ('js/Projet_Detail.js') }}"></script>
+    {% endblock %}
     {% endblock %}

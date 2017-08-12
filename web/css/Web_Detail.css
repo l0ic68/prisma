@@ -1,9 +1,222 @@
 /* CSS de la page Projets */
 
 /* Header banner */
-#Service_Banner, #Service_Banner img {
+#Service_Banner {
+  height: 20em;
   width: 100%;
-  height: auto;
+  background-size: cover;
+  background-image: url("../img/Background_Project.jpg");
 }
 
 /* Corp page */
+#Service_nav, #Service_Nav ul {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  height: 3em;
+  width: 100%;
+  background-color: red;
+}
+
+#Service_Nav ul li {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 20%;
+  padding: 0;
+  margin: 0;
+}
+
+#Service_Nav ul li a {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: Black;
+  font-family: 'Poiret One', cursive;
+  font-weight: bold;
+  font-size: 1.5em;
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+#Service_Nav ul li #Service_Current {
+  height: 100%;
+  background-color: #B2000B;
+  color: white;
+}
+
+#Estimation_link {
+  height: 3em;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background-color: #B2000B;
+}
+
+#Estimation_link a {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background-color: #B2000B;
+  color: white;
+  font-family: 'Poiret One', cursive;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 1.5em;
+}
+
+#Service_Content {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+.Service_Box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-left: 0;
+  padding-top: 0;
+  min-width: 100%;
+}
+.service_header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  background-color: #D2D2D2;
+}
+
+#ico_header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0.5em;
+  width: 100%;
+  font-size: 2em;
+}
+
+.service_header_title {
+  width: 40%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.service_header_title h2 {
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Poiret One', cursive;
+}
+
+.Service_Section_Content {
+  min-height: 40vh;
+  padding-left: 20%;
+  padding-right: 20%;
+}
+
+
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.carousel {
+  display: flex;
+  left: -100%;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  transform: translateX(100%);
+}
+
+@media (min-width: 30em) {
+  .carousel {
+    left: -100%;
+    transform: translateX(100%);
+  }
+}
+
+@media (min-width: 40em) {
+  .carousel {
+    left: -100%;
+    transform: translateX(100%);
+  }
+}
+
+.carousel.is-reversing {
+  transform: translateX(-100%);
+}
+
+@media (min-width: 30em) {
+  .carousel.is-reversing {
+    transform: translateX(-100%);
+  }
+}
+
+@media (min-width: 40em) {
+  .carousel.is-reversing {
+    transform: translateX(-100%);
+  }
+}
+
+.carousel.is-set {
+  transform: none;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-seat {
+  flex: 1 0 100%;
+  order: 2;
+}
+
+@media (min-width: 30em) {
+  .carousel-seat {
+    flex-basis: 100%;
+  }
+}
+
+@media (min-width: 40em) {
+  .carousel-seat {
+    flex-basis: 100%;
+  }
+}
+
+.carousel-seat.is-ref {
+  order: 1;
+}
+
+.toggle {
+  border: none;
+  color: black;
+  padding: 0.5em 1em;
+  font-size: 1.5em;
+}

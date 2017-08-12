@@ -18,7 +18,7 @@
   margin: 0;
   height: 3em;
   width: 100%;
-  background-color: #21B556;
+  background-color: #8166BD;;
 }
 
 #Service_Nav ul li {
@@ -50,6 +50,6 @@
 
 #Service_Nav ul li #Service_Current {
   height: 100%;
-  background-color: green;
+  background-color: purple;
   color: white;
 }

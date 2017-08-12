@@ -1,62 +1,21 @@
 {% extends "::layout/layout.html.twig" %}
 {% block stylesheets %}
-  <link rel="stylesheet" href="{{ asset('CSS/Service_Detail.css') }}">
+  <link rel="stylesheet" href="{{ asset('css/Audiovisuel_Detail.css') }}">
 {% endblock %}
 {% block body %}
     <section>
-      <div id="Service_Banner">
-        <img src="http://www.placehold.it/1280x200" alt="Banniere service"/>
-      </div>
+    <div id="Service_Banner">
+    </div>
       <nav id="Service_Nav">
         <ul>
           <li id="Web"><a href="{{ path('web_detail') }}">Site Web</a></li>
-          <li id="Audiovisuel_Current"><a href="#">Audiovisuel</a></li>
+          <li id="Audiovisuel_Current"><a href="#" id="Service_Current">Audiovisuel</a></li>
           <li id="Social"><a href="{{ path('reseau_detail') }}">Reseaux Sociaux</a></li>
           <li id="Graphic"><a href="{{ path('graphic_detail') }}">Charte Graphique</a></li>
           <li id="Materiel"><a href="{{ path('materiel_detail') }}">Materiel</a></li>
         </ul>
       </nav>
 
-      <div id="Service_Audiovisuel">
-        <div id="Service_Header">
-          <p id="Service_Header_Text">Texte de presentation de l'audiovisuel</p>
-        </div>
-        <div id="Service_Content">
-          <div class="Service_Box">
-            <img src="http://www.placehold.it/50x50" alt="#">
-            <h2>Presentation</h2>
-            <p>Video présentant votre entreprise, groupe de musique, projet, ...</p>
-          </div>
-          <div class="Service_Box">
-            <img src="http://www.placehold.it/50x50" alt="#">
-            <h2>Interview</h2>
-            <p>Interview du gerant de l'entreprise, des employés sur differents thèmes</p>
-          </div>
-          <div class="Service_Box">
-            <img src="http://www.placehold.it/50x50" alt="#">
-            <h2>Making-Of</h2>
-            <p>Tous les procédés de fabrication de vos produits</p>
-          </div>
-          <div class="Service_Box">
-            <img src="http://www.placehold.it/50x50" alt="#">
-            <h2>Diffusion en Direct</h2>
-            <p>Diffusion en direct sur Facebook, Twitch, Youtube, ...</p>
-          </div>
-          <div class="Service_Box">
-            <img src="http://www.placehold.it/50x50" alt="#">
-            <h2>Captation d'événement</h2>
-            <ul>
-              <li>Fête d'entreprise</li>
-              <li>Convention</li>
-              <li>Festival</li>
-            </ul>
-          </div>
-          <div class="Service_Box">
-            <img src="http://www.placehold.it/50x50" alt="#">
-            <h2>Liens</h2>
-            <p>En lien avec la plateforme de video Youtube afin de toucher un plus large public</p>
-          </div>
-        </div>
-      </div>
+      <p>A venir</p>
     </section>
 {% endblock %}

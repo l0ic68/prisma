@@ -1,9 +1,55 @@
 /* CSS de la page Projets */
 
 /* Header banner */
-#Service_Banner, #Service_Banner img {
+#Service_Banner {
+  height: 20em;
   width: 100%;
-  height: auto;
+  background-size: cover;
+  background-image: url("../img/Background_Project.jpg");
 }
 
 /* Corp page */
+#Service_nav, #Service_Nav ul {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  height: 3em;
+  width: 100%;
+  background-color: #4E72FF;
+}
+
+#Service_Nav ul li {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 20%;
+  padding: 0;
+  margin: 0;
+}
+
+#Service_Nav ul li a {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: Black;
+  font-family: 'Poiret One', cursive;
+  font-weight: bold;
+  font-size: 1.5em;
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+#Service_Nav ul li #Service_Current {
+  height: 100%;
+  background-color: blue;
+  color: white;
+}

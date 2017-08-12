@@ -115,18 +115,39 @@
 
         <div id="Bloc_Confiance">
             <h2>Ils nous font confiance !</h2>
-            <div id="Bloc_Confiance_Slider">
-                <i class="fa fa-chevron-left" aria-hidden="true"></i>
-                <div id="Bloc_Confiance_data">
-                    <img src="http://www.placehold.it/100x100" alt="#">
-                    <img src="http://www.placehold.it/100x100" alt="#">
-                    <img src="http://www.placehold.it/100x100" alt="#">
-                    <img src="http://www.placehold.it/100x100" alt="#" class="Mobile_Overflow">
-                    <img src="http://www.placehold.it/100x100" alt="#" class="Mobile_Overflow">
-                </div>
-                <i class="fa fa-chevron-right" aria-hidden="true"></i>
-            </div>
-        </div>
+            <button class='toggle' data-toggle='prev'><i class="fa fa-chevron-left" aria-hidden="true"></i></button>
+            <div class='container'>
+              <ul class='carousel is-set'>
+                <li class='carousel-seat'>
+                  <h2>1</h2>
+                </li>
+                <li class='carousel-seat'>
+                  <h2>2</h2>
+                </li>
+                <li class='carousel-seat'>
+                  <h2>3</h2>
+                </li>
+                <li class='carousel-seat'>
+                  <h2>4</h2>
+                </li>
+                <li class='carousel-seat'>
+                  <h2>5</h2>
+                </li>
+                <li class='carousel-seat'>
+                  <h2>6</h2>
+                </li>
+                <li class='carousel-seat'>
+                  <h2>7</h2>
+                </li>
+                <li class='carousel-seat is-ref'>
+                  <h2>8</h2>
+                </li>
+              </ul>
+
+  </div>
+  <button class='toggle' data-toggle='next'><i class="fa fa-chevron-right" aria-hidden="true"></i></button>
+
+</div>
 
         <div id="Bloc_Temoin">
             <h2>Témoignages</h2>
@@ -149,6 +170,7 @@
         </div>
     </section>
     {% block javascripts %}
+    <script type="text/javascript" src="../js/Carousel_Confiance.js"></script>
         <script type="text/javascript">
             $(function(){
                 $('.search').on('click', function()
